@@ -1,0 +1,127 @@
+config:
+  label: ESP-8266-Overview
+  layoutType: fixed
+  scale: false
+  screenHeight: 1100
+  screenWidth: 1500
+blocks: []
+masonry: null
+grid:
+  - component: oh-grid-item
+    config:
+      x: 0
+      y: 0
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Ref
+            background: grey
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 2
+      y: 0
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: ESP status
+            background: grey
+            fontSize: "18"
+          slots: null
+  - component: oh-grid-item
+    config:
+      x: 4
+      y: 0
+      h: 1
+      w: 1
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Alarm sensor
+            background: grey
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 5
+      y: 0
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Temperatue
+            fontSize: "18"
+            background: grey
+  - component: oh-grid-item
+    config:
+      x: 7
+      y: 0
+      h: 1
+      w: 1
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Alarm system
+            background: grey
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 8
+      y: 0
+      h: 1
+      w: 3
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Load
+            background: grey
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 11
+      y: 0
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: RSSI
+            background: grey
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 13
+      y: 0
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Web activity
+            background: grey
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 15
+      y: 0
+      h: 1
+      w: 1
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Reboot
+            background: grey
+            fontSize: "18"

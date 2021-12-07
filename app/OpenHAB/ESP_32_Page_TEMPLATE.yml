@@ -1,0 +1,439 @@
+config:
+  label: ESP_NAME
+  layoutType: fixed
+  showFullscreenIcon: true
+  order: "ESP_REFERENCE"
+  sidebar: true
+  colNum: 21
+blocks: []
+masonry: null
+grid:
+  - component: oh-grid-item
+    config:
+      x: 2
+      y: 0
+      h: 5
+      w: 7
+    slots:
+      default:
+        - component: oh-webframe-card
+          config:
+            src: http://ESP_IP_ADDRESS:8080/view
+            title: Streaming
+            borders: false
+  - component: oh-grid-item
+    config:
+      x: 0
+      y: 0
+      h: 2
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_System_Name
+            title: Name
+            vertical: true
+  - component: oh-grid-item
+    config:
+      x: 0
+      y: 2
+      h: 3
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_System_CodeVersion
+            title: Version
+  - component: oh-grid-item
+    config:
+      x: 13
+      y: 0
+      h: 9
+      w: 3
+    slots:
+      default:
+        - component: oh-list-card
+          config:
+            title: Framesize
+          slots:
+            default:
+              - component: oh-list-item
+                config:
+                  title: Thumb 96x96
+                  action: command
+                  actionCommand: http://ESP_IP_ADDRESS/control?var=framesize&val=0
+                  listButton: true
+              - component: oh-list-item
+                config:
+                  title: QQVGA 160x120
+                  action: command
+                  actionCommand: http://ESP_IP_ADDRESS/control?var=framesize&val=1
+                  listButton: true
+              - component: oh-list-item
+                config:
+                  title: HQVGA 240x176
+                  action: command
+                  actionCommand: http://ESP_IP_ADDRESS/control?var=framesize&val=3
+                  listButton: true
+              - component: oh-list-item
+                config:
+                  title: QVGA 320x240
+                  action: command
+                  actionCommand: http://ESP_IP_ADDRESS/control?var=framesize&val=5
+                  listButton: true
+              - component: oh-list-item
+                config:
+                  title: CIF 400x296
+                  action: command
+                  actionCommand: http://ESP_IP_ADDRESS/control?var=framesize&val=6
+                  listButton: true
+                  accordionItemOpened: true
+              - component: oh-list-item
+                config:
+                  title: HVGA 480x320
+                  action: command
+                  actionCommand: http://ESP_IP_ADDRESS/control?var=framesize&val=7
+                  listButton: true
+              - component: oh-list-item
+                config:
+                  title: VGA 640x480
+                  action: command
+                  actionCommand: http://ESP_IP_ADDRESS/control?var=framesize&val=8
+                  listButton: true
+              - component: oh-list-item
+                config:
+                  title: SVGA 800x600
+                  action: command
+                  actionCommand: http://ESP_IP_ADDRESS/control?var=framesize&val=9
+                  listButton: true
+              - component: oh-list-item
+                config:
+                  title: XGA 1024x768
+                  action: command
+                  actionCommand: http://ESP_IP_ADDRESS/control?var=framesize&val=10
+                  listButton: true
+              - component: oh-list-item
+                config:
+                  title: HD 1280x720
+                  action: command
+                  actionCommand: http://ESP_IP_ADDRESS/control?var=framesize&val=11
+                  listButton: true
+              - component: oh-list-item
+                config:
+                  title: SXGA 1280x1024
+                  action: command
+                  actionCommand: http://ESP_IP_ADDRESS/control?var=framesize&val=12
+                  listButton: true
+              - component: oh-list-item
+                config:
+                  title: XGA 1600x1200
+                  action: command
+                  actionCommand: http://ESP_IP_ADDRESS/control?var=framesize&val=13
+                  listButton: true
+  - component: oh-grid-item
+    config:
+      x: 0
+      y: 5
+      h: 4
+      w: 3
+    slots:
+      default:
+        - component: oh-list-card
+          config:
+            title: Lamp
+          slots:
+            default:
+              - component: oh-toggle-item
+                config:
+                  title: On/Off
+                  item: ESP_NAME_Lamp_OnOff
+              - component: oh-toggle-item
+                config:
+                  title: Auto
+                  item: ESP_NAME_Lamp_Auto
+              - component: oh-slider-item
+                config:
+                  item: ESP_NAME_Lamp
+                  min: 0
+                  max: 100
+                  stepSize: 1
+                  title: Intensity
+  - component: oh-grid-item
+    config:
+      x: 3
+      y: 5
+      h: 4
+      w: 3
+    slots:
+      default:
+        - component: oh-list-card
+          config:
+            title: Face
+          slots:
+            default:
+              - component: oh-toggle-item
+                config:
+                  item: ESP_NAME_Face_Detection
+                  title: Detection
+              - component: oh-toggle-item
+                config:
+                  item: ESP_NAME_Face_Recognition
+                  title: Recognition
+              - component: oh-toggle-item
+                config:
+                  item: ESP_NAME_Face_Enrollment
+                  title: Enrollment
+              - component: oh-label-item
+                config:
+                  title: Enrolled
+                  item: ESP_NAME_System_EnrolledFaces
+  - component: oh-grid-item
+    config:
+      x: 16
+      y: 0
+      h: 9
+      w: 5
+    slots:
+      default:
+        - component: oh-list-card
+          config:
+            title: Features
+          slots:
+            default:
+              - component: oh-toggle-item
+                config:
+                  title: WPC
+                  item: ESP_NAME_Camera_WPC
+              - component: oh-toggle-item
+                config:
+                  title: BPC
+                  item: ESP_NAME_Camera_BPC
+              - component: oh-toggle-item
+                config:
+                  title: DCW
+                  item: ESP_NAME_Camera_DCW
+              - component: oh-toggle-item
+                config:
+                  title: GMA
+                  item: ESP_NAME_Camera_RawGMA
+              - component: oh-toggle-item
+                config:
+                  title: AEC
+                  item: ESP_NAME_Camera_AEC
+              - component: oh-stepper-item
+                config:
+                  item: ESP_NAME_Camera_AECvalue
+                  min: 0
+                  max: 1536
+                  round: true
+                  autorepeat: true
+                  raised: true
+              - component: oh-toggle-item
+                config:
+                  title: AEC2
+                  item: ESP_NAME_Camera_AEC2
+              - component: oh-toggle-item
+                config:
+                  title: AGC
+                  item: ESP_NAME_Camera_AGC
+              - component: oh-stepper-item
+                config:
+                  item: ESP_NAME_Camera_AGCgain
+                  min: 0
+                  max: 64
+                  round: true
+                  autorepeat: true
+                  raised: true
+              - component: oh-toggle-item
+                config:
+                  title: AWB
+                  item: ESP_NAME_Camera_AWB
+              - component: oh-toggle-item
+                config:
+                  title: AWB gain
+                  item: ESP_NAME_Camera_AWBgain
+              - component: oh-toggle-item
+                config:
+                  title: Lenc
+                  item: ESP_NAME_Camera_Lenc
+              - component: oh-stepper-item
+                config:
+                  title: Gainceiling
+                  item: ESP_NAME_Camera_Gainceiling
+                  min: 0
+                  max: 511
+                  round: true
+                  autorepeat: true
+                  raised: true
+  - component: oh-grid-item
+    config:
+      x: 9
+      y: 0
+      h: 9
+      w: 4
+    slots:
+      default:
+        - component: oh-list-card
+          config:
+            title: Camera
+          slots:
+            default:
+              - component: oh-toggle-item
+                config:
+                  title: Mirror
+                  item: ESP_NAME_Camera_HorizontalMirror
+              - component: oh-toggle-item
+                config:
+                  title: Flip
+                  item: ESP_NAME_Camera_VerticalFlip
+              - component: oh-slider-item
+                config:
+                  title: Rotate
+                  item: ESP_NAME_Camera_Rotate
+                  min: -90
+                  max: 90
+                  step: 90
+                  unit: °
+              - component: oh-slider-item
+                config:
+                  item: ESP_NAME_Camera_Quality
+                  title: Quality
+                  min: 4
+                  max: 10
+              - component: oh-slider-item
+                config:
+                  title: Contrast
+                  item: ESP_NAME_Camera_Contrast
+                  min: -3
+                  max: 3
+              - component: oh-slider-item
+                config:
+                  title: Brightness
+                  item: ESP_NAME_Camera_Brightness
+                  min: -3
+                  max: 3
+              - component: oh-slider-item
+                config:
+                  title: Saturation
+                  item: ESP_NAME_Camera_Saturation
+                  min: -4
+                  max: 4
+  - component: oh-grid-item
+    config:
+      x: 6
+      y: 5
+      h: 4
+      w: 3
+    slots:
+      default:
+        - component: oh-list-card
+          config:
+            title: Preferences
+          slots:
+            default:
+              - component: oh-list-item
+                config:
+                  listButton: true
+                  title: Clear
+                  action: command
+                  actionItem: ESP_NAME_Preferences_Clear
+              - component: oh-list-item
+                config:
+                  title: Save
+                  action: command
+                  listButton: true
+                  actionItem: ESP_NAME_Preferences_Save
+              - component: oh-list-item
+                config:
+                  title: Reboot
+                  action: command
+                  listButton: true
+                  actionItem: ESP_NAME_System_Reboot
+  - component: oh-grid-item
+    config:
+      x: 0
+      y: 9
+      h: 3
+      w: 4
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_System_HeapFree
+            title: Free heap
+            fontSize: "18"
+            trendItem: ESP_NAME_System_HeapFree
+            icon: oh:chart
+  - component: oh-grid-item
+    config:
+      x: 4
+      y: 9
+      h: 3
+      w: 4
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_System_RAMfree
+            trendItem: ESP_NAME_System_RAMfree
+            fontSize: "18"
+            title: Free RAM
+            icon: oh:heating
+  - component: oh-grid-item
+    config:
+      x: 8
+      y: 9
+      h: 3
+      w: 4
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            title: MCU t°
+            item: ESP_NAME_System_MCUtemperature
+            icon: oh:temperature
+            trendItem: ESP_NAME_System_MCUtemperature
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 12
+      y: 9
+      h: 3
+      w: 4
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            title: FS used
+            item: ESP_NAME_System_FSused
+            trendItem: ESP_NAME_System_FSused
+            fontSize: "18"
+            icon: oh:text
+  - component: oh-grid-item
+    config:
+      x: 16
+      y: 9
+      h: 3
+      w: 5
+    slots:
+      default:
+        - component: oh-list-card
+          config:
+            title: Stream
+            simpleList: true
+          slots:
+            default:
+              - component: oh-label-item
+                config:
+                  item: ESP_NAME_Network_ActiveStreams
+                  title: Active
+              - component: oh-label-item
+                config:
+                  item: ESP_NAME_Network_PreviousStreams
+                  title: Previous
+              - component: oh-label-item
+                config:
+                  item: ESP_NAME_Network_ImagesCaptured
+                  title: Capture

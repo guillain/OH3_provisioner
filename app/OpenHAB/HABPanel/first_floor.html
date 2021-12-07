@@ -1,0 +1,104 @@
+<div style="position: absolute;
+						top: 0;
+						bottom: 0;
+						left: -10px; right: -10px;
+						background: url('http://domo:8080/static/images/1_first_floor.png');
+						background-size: cover;
+						background-repeat: no-repeat;">
+
+	<!-- 18_Bathroom -->
+	<div style="top: 150px; left: 340px; width: 100px; height: 133px; position: absolute; background: rgba(0,0,0,0.5); border-radius: 20px;">
+    <div class="row" id="18_Bathroom_System_Alert" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'power'" size="24" state="itemValue('18_Bathroom_System_Alert')=='OFF' ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('18_Bathroom_System_Alert')}}</span></div>
+    </div>
+    <div class="row" id="18_Bathroom_Sensor_Alert" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'eye'" size="24" state="itemValue('18_Bathroom_Sensor_Alert')=='OFF' ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('18_Bathroom_Sensor_Alert')}}</span></div>
+    </div>	
+    <div class="row" id="18_Bathroom_Sensor_Temperature" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'temperature'" size="24" state="itemValue('18_Bathroom_Sensor_Temperature')>20 ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('18_Bathroom_Sensor_Temperature')}}°C</span></div>
+    </div>
+    <div class="row" id="18_Bathroom_Sensor_Humidity" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'drop'" size="24" state="itemValue('18_Bathroom_Sensor_Humidity')<50 ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('18_Bathroom_Sensor_Humidity')}}%</span></div>
+    </div>
+    <div class="row" id="18_Bathroom_Sensor_Pressure" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'thermostat'" size="24" state="itemValue('18_Bathroom_Sensor_Pressure')<1000 ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{'%.02f' | sprintf:itemValue('18_Bathroom_Sensor_Pressure')/10000}}<small style="font-size:8pt">MPa</small></span></div>
+    </div>
+	</div>
+	
+	<!-- 19_Nina -->
+	<div style="top: 240px; left: 1150px; width: 100px; height: 133px; position: absolute; background: rgba(0,0,0,0.5); border-radius: 20px;">
+    <div class="row" id="19_Nina_System_Alert" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'power'" size="24" state="itemValue('19_Nina_System_Alert')=='OFF' ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('19_Nina_System_Alert')}}</span></div>
+    </div>
+    <div class="row" id="19_Nina_Sensor_Alert" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'eye'" size="24" state="itemValue('19_Nina_Sensor_Alert')=='OFF' ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('19_Nina_Sensor_Alert')}}</span></div>
+    </div>	
+    <div class="row" id="19_Nina_Sensor_Temperature" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'temperature'" size="24" state="itemValue('19_Nina_Sensor_Temperature')>20 ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('19_Nina_Sensor_Temperature')}}°C</span></div>
+    </div>
+    <div class="row" id="19_Nina_Sensor_Humidity" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'drop'" size="24" state="itemValue('19_Nina_Sensor_Humidity')<50 ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('19_Nina_Sensor_Humidity')}}%</span></div>
+    </div>
+    <div class="row" id="19_Nina_Sensor_Pressure" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'thermostat'" size="24" state="itemValue('19_Nina_Sensor_Pressure')<1000 ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{'%.02f' | sprintf:itemValue('19_Nina_Sensor_Pressure')/10000}}<small style="font-size:8pt">MPa</small></span></div>
+    </div>
+	</div>
+	
+	<!-- 20_Luca -->
+	<div style="top: 480px; left: 1030px; width: 100px; height: 133px; position: absolute; background: rgba(0,0,0,0.5); border-radius: 20px;">
+    <div class="row" id="20_Luca_System_Alert" style="margin-top: 2px;">
+			<div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'power'" size="24" state="itemValue('20_Luca_System_Alert')=='OFF' ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('20_Luca_System_Alert')}}</span></div>
+    </div>
+    <div class="row" id="20_Luca_Sensor_Alert" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'eye'" size="24" state="itemValue('20_Luca_Sensor_Alert')=='OFF' ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('20_Luca_Sensor_Alert')}}</span></div>
+    </div>	
+    <div class="row" id="20_Luca_Sensor_Temperature" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'temperature'" size="24" state="itemValue('20_Luca_Sensor_Temperature')>20 ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('20_Luca_Sensor_Temperature')}}°C</span></div>
+    </div>
+    <div class="row" id="20_Luca_Sensor_Humidity" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'drop'" size="24" state="itemValue('20_Luca_Sensor_Humidity')<50 ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('20_Luca_Sensor_Humidity')}}%</span></div>
+    </div>
+    <div class="row" id="20_Luca_Sensor_Pressure" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'thermostat'" size="24" state="itemValue('20_Luca_Sensor_Pressure')<1000 ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{'%.02f' | sprintf:itemValue('20_Luca_Sensor_Pressure')/10000}}<small style="font-size:8pt">MPa</small></span></div>
+    </div>
+	</div>
+	
+	<!-- 21_Friendroom -->
+	<div style="top: 520px; left: 175px; width: 100px; height: 133px; position: absolute; background: rgba(0,0,0,0.5); border-radius: 20px;">
+    <div class="row" id="21_Friendroom_System_Alert" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'power'" size="24" state="itemValue('21_Friendroom_System_Alert')=='OFF' ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('21_Friendroom_System_Alert')}}</span></div>
+    </div>
+    <div class="row" id="21_Friendroom_Sensor_Alert" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'eye'" size="24" state="itemValue('21_Friendroom_Sensor_Alert')=='OFF' ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('21_Friendroom_Sensor_Alert')}}</span></div>
+    </div>	
+    <div class="row" id="21_Friendroom_Sensor_Temperature" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'temperature'" size="24" state="itemValue('21_Friendroom_Sensor_Temperature')>20 ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('21_Friendroom_Sensor_Temperature')}}°C</span></div>
+    </div>
+    <div class="row" id="21_Friendroom_Sensor_Humidity" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'drop'" size="24" state="itemValue('21_Friendroom_Sensor_Humidity')<50 ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('21_Friendroom_Sensor_Humidity')}}%</span></div>
+    </div>
+    <div class="row" id="21_Friendroom_Sensor_Pressure" style="margin-top: 2px;">
+      <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'thermostat'" size="24" state="itemValue('21_Friendroom_Sensor_Pressure')<1000 ? 'OFF':'ON'" /></span></div>
+      <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{'%.02f' | sprintf:itemValue('21_Friendroom_Sensor_Pressure')/10000}}<small style="font-size:8pt">MPa</small></span></div>
+    </div>
+	</div>
+</div>

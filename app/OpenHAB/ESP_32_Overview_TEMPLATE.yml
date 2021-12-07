@@ -1,0 +1,146 @@
+
+  - component: oh-grid-item
+    config:
+      x: 0
+      y: 1
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_System_Name
+            label: ESP_NAME
+            fontSize: "18"
+            action: navigate
+            actionPage: page:ESP_NAME
+            icon: ESP_ICON
+  - component: oh-grid-item
+    config:
+      x: 2
+      y: 1
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_System_Name
+            fontSize: "18"
+          slots: null
+  - component: oh-grid-item
+    config:
+      x: 4
+      y: 1
+      h: 1
+      w: 3
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_System_CodeVersion
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 7
+      y: 1
+      h: 1
+      w: 1
+    slots:
+      default:
+        - component: oh-list-card
+          config: {}
+          slots:
+            default:
+              - component: oh-toggle-item
+                config:
+                  item: ESP_NAME_Lamp_OnOff
+                  color: green
+  - component: oh-grid-item
+    config:
+      x: 8
+      y: 1
+      h: 1
+      w: 1
+    slots:
+      default:
+        - component: oh-list-card
+          config: {}
+          slots:
+            default:
+              - component: oh-toggle-item
+                config:
+                  item: ESP_NAME_Face_Detection
+                  color: green
+  - component: oh-grid-item
+    config:
+      x: 9
+      y: 1
+      h: 1
+      w: 1
+    slots:
+      default:
+        - component: oh-list-card
+          config: {}
+          slots:
+            default:
+              - component: oh-toggle-item
+                config:
+                  item: ESP_NAME_Face_Enrollment
+                  color: green
+  - component: oh-grid-item
+    config:
+      x: 10
+      y: 1
+      h: 1
+      w: 1
+    slots:
+      default:
+        - component: oh-list-card
+          config: {}
+          slots:
+            default:
+              - component: oh-toggle-item
+                config:
+                  item: ESP_NAME_Face_Recognition
+                  color: green
+  - component: oh-grid-item
+    config:
+      x: 11
+      y: 1
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_System_HeapFree
+            fontSize: "18"
+            trendItem: ESP_NAME_System_HeapFree
+  - component: oh-grid-item
+    config:
+      x: 13
+      y: 1
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_System_RAMfree
+            fontSize: "18"
+            trendItem: ESP_NAME_System_RAMfree
+  - component: oh-grid-item
+    config:
+      x: 15
+      y: 1
+      h: 1
+      w: 1
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            action: command
+            actionItem: ESP_NAME_System_Reboot
+            icon: oh:switch
+            label: " "

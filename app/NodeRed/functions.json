@@ -1,0 +1,260 @@
+[
+    {
+        "id": "14aa0e38dde9cdd7",
+        "type": "tab",
+        "label": "Functions",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "f77c2374249f86e9",
+        "type": "function",
+        "z": "14aa0e38dde9cdd7",
+        "name": "sensor_alert",
+        "func": "",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "context.global.sensor_alert = function(msg, esp_ref) {\n    var alert = 0;\n\n    if ((msg.topic === 'ESP/8266/' + esp_ref + '/sound/state') ||\n        (msg.topic === 'ESP/8266/' + esp_ref + '/presence/state') ||\n        (msg.topic === 'ESP/8266/' + esp_ref + '/luminosity/state')) {\n        \n        if (Number(msg.payload) > 0){\n            alert = 1;\n        }\n    }\n    \n    return {topic: 'alert', payload: alert};\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7eea409bd70935e2",
+        "type": "function",
+        "z": "14aa0e38dde9cdd7",
+        "name": "system_alert",
+        "func": "",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "context.global.system_alert = function(msg, esp_ref) {\n    var alert = 0;\n    \n    if ((msg.topic === 'ESP/8266/' + esp_ref + '/LWT') ||\n        (msg.topic === 'ESP/8266/' + esp_ref + '/mqtt/status')){\n        if (String(msg.payload) !== \"Connected\"){\n            alert = 1;\n        }\n    } else if (msg.topic === 'ESP/8266/' + esp_ref + '/system/uptime') {\n        if (Number(msg.payload) < 5){\n            alert = 1;\n        }\n    } else if (msg.topic === 'ESP/8266/' + esp_ref + '/system/load') {\n        if (Number(msg.payload) > 90){\n            alert = 1;\n        }\n    }\n    \n    return {topic: 'alert', payload: alert};\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 210,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5f342eff0babb0e4",
+        "type": "function",
+        "z": "14aa0e38dde9cdd7",
+        "name": "luminosity_state",
+        "func": "",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "context.global.luminosity_state = function(msg, esp_ref) {\n    var luminosity_state_value = 0;\n    \n    if (msg.topic === 'ESP/8266/' + esp_ref + '/luminosity/lux') {\n        if (Number(msg.payload) > 0) {\n            luminosity_state_value = 1;\n        }\n    }\n    \n    return {topic: 'state', payload: luminosity_state_value};\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 220,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "419436bb0177cf03",
+        "type": "comment",
+        "z": "14aa0e38dde9cdd7",
+        "name": "ESP-8266",
+        "info": "",
+        "x": 210,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "7c9a10c05d5650d2",
+        "type": "comment",
+        "z": "14aa0e38dde9cdd7",
+        "name": "ESP-32",
+        "info": "",
+        "x": 710,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "5dbad92c3d6c4117",
+        "type": "function",
+        "z": "14aa0e38dde9cdd7",
+        "name": "status_lamp",
+        "func": "",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "context.global.esp32_status = function(msg, esp_ref, item) {\n    //var status = JSON.parse(msg.payload);\n    return {topic: item, payload: msg.payload[item]};\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b5520a32ef6ce09",
+        "type": "function",
+        "z": "14aa0e38dde9cdd7",
+        "name": "system_boot",
+        "func": "",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "context.global.system_boot = function(msg, esp_ref) {\n    if (msg.topic === 'ESP/8266/' + esp_ref + '/rfid') {\n        if (msg.payload.type === 'boot') {\n            return {topic: 'boot', payload: JSON.stringify({\n                \"time\": msg.payload.time,\n                \"IP\": msg.payload[\"Local IP\"],\n                \"SSID\": msg.payload[\"Wifi SSID\"]\n            })}\n        }\n    }\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "991e68ad5d7589b4",
+        "type": "function",
+        "z": "14aa0e38dde9cdd7",
+        "name": "system_heartbeat",
+        "func": "",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "context.global.system_heartbeat = function(msg, esp_ref) {\n    if (msg.topic === 'ESP/8266/' + esp_ref + '/rfid/sync') {\n        if (msg.payload.type === 'heartbeat') {\n            return {topic: 'heartbeat', payload: JSON.stringify({\n                \"time\": msg.payload.time,\n                \"IP\": msg.payload.ip,\n                \"name\": msg.payload.door\n            })}\n        }\n    }\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "809a83bca45146d9",
+        "type": "function",
+        "z": "14aa0e38dde9cdd7",
+        "name": "network_Wifi",
+        "func": "",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "context.global.network_Wifi = function(msg, esp_ref) {\n    if (msg.topic === 'ESP/8266/' + esp_ref + '/rfid/send') {\n        if (msg.payload.src === 'wifi') {\n            return {topic: 'wifi', payload: JSON.stringify({\n                \"type\": msg.payload.type,\n                \"description\": msg.payload.desc,\n                \"data\": msg.payload.data,\n                \"door\": msg.payload.door,\n                \"time\": msg.payload.time\n            })}\n        }\n    }\n}\n",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1bdf11d0303cdb6a",
+        "type": "comment",
+        "z": "14aa0e38dde9cdd7",
+        "name": "ESP-8266-RFID",
+        "info": "",
+        "x": 460,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "f32378d2209394b4",
+        "type": "function",
+        "z": "14aa0e38dde9cdd7",
+        "name": "access_last_ok",
+        "func": "",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "context.global.access_last_ok = function(msg, esp_ref) {\n    if (msg.topic === 'ESP/8266/' + esp_ref + '/rfid/send') {\n        if (msg.payload.type === 'access') {\n            if (msg.payload.isKnown === 'true') {\n                return {topic: 'last_ok', payload: JSON.stringify({\n                    \"time\": msg.payload.time,\n                    \"access\": msg.payload.access,\n                    \"username\": msg.payload.username,\n                    \"uid\": msg.payload.uid\n                })}\n            }\n        }\n    }\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6ef54b55f295f286",
+        "type": "function",
+        "z": "14aa0e38dde9cdd7",
+        "name": "access_last_ko",
+        "func": "",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "context.global.access_last_ko = function(msg, esp_ref) {\n    if (msg.topic === 'ESP/8266/' + esp_ref + '/rfid/send') {\n        if (msg.payload.type === 'access') {\n            if (msg.payload.isKnown !== 'true') {\n                return {topic: 'last_ko', payload: JSON.stringify({\n                    \"time\": msg.payload.time,\n                    \"access\": msg.payload.access,\n                    \"username\": msg.payload.username,\n                    \"uid\": msg.payload.uid\n                })}\n            }\n        }\n    }\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3b95fa4accf5c5f6",
+        "type": "function",
+        "z": "14aa0e38dde9cdd7",
+        "name": "network_WebService",
+        "func": "",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "context.global.network_WebService = function(msg, esp_ref) {\n    if (msg.topic === 'ESP/8266/' + esp_ref + '/rfid/send') {\n        if (msg.payload.src === 'websrv') {\n            return {topic: 'web_service', payload: JSON.stringify({\n                \"type\": msg.payload.type,\n                \"description\": msg.payload.desc,\n                \"data\": msg.payload.data,\n                \"door\": msg.payload.door,\n                \"time\": msg.payload.time\n            })}\n        }\n    }\n}\n",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ac7b11ac1f1abfcb",
+        "type": "function",
+        "z": "14aa0e38dde9cdd7",
+        "name": "rfid_users",
+        "func": "",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "context.global.rfid_users = function(msg, esp_ref) {\n    if (msg.topic === 'ESP/8266/' + esp_ref + '/rfid/send') {\n        if (msg.payload.command === 'userfile') {\n            return {topic: 'ESP/8266/' + esp_ref + '/rfid/users/' + msg.payload.user, payload: JSON.stringify({\n                \"uid\": msg.payload.uid,\n                \"user\": msg.payload.user,\n                \"acctype\": msg.payload.acctype,\n                \"acctype2\": msg.payload.acctype2,\n                \"acctype3\": msg.payload.acctype3,\n                \"acctype4\": msg.payload.acctype4,\n                \"validuntil\": msg.payload.validuntil\n            })}\n        }\n    }\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1f3b7d5783e30f29",
+        "type": "function",
+        "z": "14aa0e38dde9cdd7",
+        "name": "door_open",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "context.global.door_open = function(msg, esp_ref) {\n    if (msg.topic === 'ESP/8266/' + esp_ref + '/access/last_ok') {\n        return {topic: 'door', payload: 'ON'}\n    }\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8c62834717a69c13",
+        "type": "function",
+        "z": "14aa0e38dde9cdd7",
+        "name": "door_close",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "context.global.door_close = function(msg, esp_ref) {\nif (msg.topic === 'ESP/8266/' + esp_ref + '/access/last_ok') {\n        return {topic: 'door', payload: 'OFF'}\n    }\n}",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    }
+]

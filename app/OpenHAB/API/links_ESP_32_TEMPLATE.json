@@ -1,0 +1,422 @@
+[
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:SavePreferences",
+		"configuration": {},
+		"itemName": "ESP_NAME_Preferences_Save"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:AEC2",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_AEC2"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Britghtness",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_Brightness"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:AElevel",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_AElevel"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:FaceDetection",
+		"configuration": {},
+		"itemName": "ESP_NAME_Face_Detection"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:FaceEnroll",
+		"configuration": {},
+		"itemName": "ESP_NAME_Face_Enrollment"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Reboot",
+		"configuration": {},
+		"itemName": "ESP_NAME_System_Reboot"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Quality",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_Quality"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {},
+		"itemName": "ESP_NAME_Network"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Gainceiling",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_Gainceiling"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Lamp_Auto",
+		"configuration": {},
+		"itemName": "ESP_NAME_Lamp_Auto"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Contrast",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_Contrast"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:AECvalue",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_AECvalue"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:FaceRecognition",
+		"configuration": {},
+		"itemName": "ESP_NAME_Face_Recognition"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:BPC",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_BPC"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:AGCgain",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_AGCgain"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Lamp_OnOff",
+		"configuration": {},
+		"itemName": "ESP_NAME_Lamp_OnOff"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:WPC",
+		"configuration": {
+			"function": "lamp.map",
+			"profile": "transform:MAP"
+		},
+		"itemName": "ESP_NAME_Camera_WPC"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Saturation",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_Saturation"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:DCW",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_DCW"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:AGC",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_AGC"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:AWBgain",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_AWBgain"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:VerticalFlip",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_VerticalFlip"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Lamp",
+		"configuration": {},
+		"itemName": "ESP_NAME_Lamp"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:HorizontalMirror",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_HorizontalMirror"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ClearPreferences",
+		"configuration": {},
+		"itemName": "ESP_NAME_Preferences_Clear"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Rotate",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_Rotate"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:AEC",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_AEC"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Lenc",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_Lenc"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Framesize",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_Framesize"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:RawGMA",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_RawGMA"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:AWB",
+		"configuration": {},
+		"itemName": "ESP_NAME_Camera_AWB"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Netmask: ((\\d*\\.){3}\\d*)<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_Network_Netmask"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Rssi: (-?\\d*)<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_Network_RSSI"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Status",
+		"configuration": {
+			"function": "$.code_ver",
+			"profile": "transform:JSONPATH"
+		},
+		"itemName": "ESP_NAME_System_CodeVersion"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Status",
+		"configuration": {
+			"function": "$.stream_url",
+			"profile": "transform:JSONPATH"
+		},
+		"itemName": "ESP_NAME_System_StreamURL"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*MCU temperature : (\\d*) &deg;C.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_System_MCUtemperature"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Active streams: (\\d*), .*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_Network_ActiveStreams"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Images captured: ((\\d)*)<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_Network_ImagesCaptured"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Up: (.*) \\(d:h:m:s\\)<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_System_Uptime"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Status",
+		"configuration": {
+			"function": "$.cam_name",
+			"profile": "transform:JSONPATH"
+		},
+		"itemName": "ESP_NAME_System_Name"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Heap: (\\d*), free: \\d*, min free: \\d*, max block: \\d*<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_System_Heap"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Heap: \\d*, free: (\\d*), min free: \\d*, max block: \\d*<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_System_HeapFree"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Heap: \\d*, free: \\d*, min free: (\\d*), max block: \\d*<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_System_HeapMinFree"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Heap: \\d*, free: \\d*, min free: \\d*, max block: (\\d*)<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_System_HeapMaxBlock"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*IP address: ((?:[0-9]{1,3}\\.){3}[0-9]{1,3})<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_Network_IP"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*MAC: (([0-9A-F]{2}[:-]){5}([0-9A-F]{2}))<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_Network_MAC"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*SSID: (\\w*)<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_Network_SSID"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:Status",
+		"configuration": {
+			"function": "$",
+			"profile": "transform:JSONPATH"
+		},
+		"itemName": "ESP_NAME_Status"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Previous streams: (\\d*), .*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_Network_PreviousStreams"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Psram: (\\d*), free: \\d*, min free: \\d*, max block: \\d*<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_System_RAM"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Psram: \\d*, free: (\\d*), min free: \\d*, max block: \\d*<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_System_RAMfree"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Psram: \\d*, free: \\d*, min free: (\\d*), max block: \\d*<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_System_RAMminFree"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Psram: \\d*, free: \\d*, min free: \\d*, max block: (\\d*)<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_System_RAMmaxBlock"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Spiffs: (\\d*), used: \\d*<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_System_FS"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Spiffs: \\d*, used: (\\d*)<br>.*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_System_FSused"
+	},
+	{
+		"editable": true,
+		"channelUID": "http:url:ESP_NAME:ESP_Dump",
+		"configuration": {
+			"function": ".*Enrolled faces: (\\d*) .*",
+			"profile": "transform:REGEX"
+		},
+		"itemName": "ESP_NAME_System_EnrolledFaces"
+	}
+]

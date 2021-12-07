@@ -1,0 +1,8 @@
+.env
+.idea
+*.log
+*.back
+*.dat
+*.bin
+*.zip
+generate/

@@ -1,0 +1,733 @@
+[
+	{
+		"statusInfo": {
+			"status": "ONLINE",
+			"statusDetail": "NONE"
+		},
+		"editable": true,
+		"label": "ESP_NAME",
+		"configuration": {
+			"authMode": "BASIC",
+			"ignoreSSLErrors": false,
+			"baseURL": "http://ESP_IP_ADDRESS",
+			"delay": 0,
+			"stateMethod": "GET",
+			"refresh": 30,
+			"commandMethod": "GET",
+			"timeout": 3000,
+			"bufferSize": 2048
+		},
+		"properties": {},
+		"UID": "http:url:ESP_NAME",
+		"location": "ESP_LOCATION",
+		"thingTypeUID": "http:url",
+		"channels": [
+			{
+				"linkedItems": [
+					"ESP_NAME_Lamp"
+				],
+				"uid": "http:url:ESP_NAME:Lamp",
+				"id": "Lamp",
+				"channelTypeUID": "http:dimmer",
+				"itemType": "Dimmer",
+				"kind": "STATE",
+				"label": "Lamp",
+				"description": "",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "100",
+					"offValue": "-1",
+					"stateExtension": "/status",
+					"increaseValue": "1",
+					"decreaseValue": "-1",
+					"commandExtension": "/control?var=lamp&val=%2$s",
+					"stateTransformation": "JSONPATH:$.lamp"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Face_Detection"
+				],
+				"uid": "http:url:ESP_NAME:FaceDetection",
+				"id": "FaceDetection",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "Face detection",
+				"description": "",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"mode": "READWRITE",
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"commandExtension": "/control?var=face_detect&val=%2$s",
+					"stateTransformation": "JSONPATH:$.face_detect"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Face_Recognition"
+				],
+				"uid": "http:url:ESP_NAME:FaceRecognition",
+				"id": "FaceRecognition",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "Face recognition",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"mode": "WRITEONLY",
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"commandExtension": "/control?var=face_recognize&val=%2$s",
+					"stateTransformation": "JSONPATH:$.face_recognize"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Face_Enrollment"
+				],
+				"uid": "http:url:ESP_NAME:FaceEnroll",
+				"id": "FaceEnroll",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "Face enroll",
+				"description": "",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"commandExtension": "/control?var=face_enroll&val=%2$s",
+					"stateTransformation": "JSONPATH:$.face_enroll"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_VerticalFlip"
+				],
+				"uid": "http:url:ESP_NAME:VerticalFlip",
+				"id": "VerticalFlip",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "Vertical flip",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"commandExtension": "/control?var=vflip&val=%2$s",
+					"stateTransformation": "JSONPATH:$.vflip"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_HorizontalMirror"
+				],
+				"uid": "http:url:ESP_NAME:HorizontalMirror",
+				"id": "HorizontalMirror",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "Horizontal mirror",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"commandExtension": "/control?var=hmirror&val=%2$s",
+					"stateTransformation": "JSONPATH:$.hmirror"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Lamp_OnOff"
+				],
+				"uid": "http:url:ESP_NAME:Lamp_OnOff",
+				"id": "Lamp_OnOff",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "Lamp",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "50",
+					"offValue": "-1",
+					"stateExtension": "/status",
+					"commandExtension": "/control?var=lamp&val=%2$s",
+					"stateTransformation": "JSONPATH:$.lamp"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_Rotate"
+				],
+				"uid": "http:url:ESP_NAME:Rotate",
+				"id": "Rotate",
+				"channelTypeUID": "http:dimmer",
+				"itemType": "Dimmer",
+				"kind": "STATE",
+				"label": "Rotate",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "90",
+					"offValue": "-90",
+					"stateExtension": "/status",
+					"increaseValue": "1",
+					"decreaseValue": "-1",
+					"commandExtension": "/control?var=rotate&val=%2$s",
+					"stateTransformation": "JSONPATH:$.rotate"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Status",
+					"ESP_NAME_System_StreamURL",
+					"ESP_NAME_System_CodeVersion",
+					"ESP_NAME_System_Name"
+				],
+				"uid": "http:url:ESP_NAME:Status",
+				"id": "Status",
+				"channelTypeUID": "http:string",
+				"itemType": "String",
+				"kind": "STATE",
+				"label": "Status",
+				"description": "",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"stateExtension": "/status",
+					"commandExtension": "/control?"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_Brightness"
+				],
+				"uid": "http:url:ESP_NAME:Britghtness",
+				"id": "Britghtness",
+				"channelTypeUID": "http:dimmer",
+				"itemType": "Dimmer",
+				"kind": "STATE",
+				"label": "Brightness",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "2",
+					"offValue": "-2",
+					"stateExtension": "/status",
+					"increaseValue": "1",
+					"decreaseValue": "-1",
+					"commandExtension": "/control?var=brightness&val=%2$s",
+					"stateTransformation": "JSONPATH:$.brightness"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_Saturation"
+				],
+				"uid": "http:url:ESP_NAME:Saturation",
+				"id": "Saturation",
+				"channelTypeUID": "http:dimmer",
+				"itemType": "Dimmer",
+				"kind": "STATE",
+				"label": "Saturation",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "2",
+					"offValue": "-2",
+					"stateExtension": "/status",
+					"increaseValue": "1",
+					"decreaseValue": "-1",
+					"commandExtension": "/control?var=saturation&val=%2$s",
+					"stateTransformation": "JSONPATH:$.saturation"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_AWB"
+				],
+				"uid": "http:url:ESP_NAME:AWB",
+				"id": "AWB",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "AWB",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"commandExtension": "/control?var=awb&val=%2$s",
+					"stateTransformation": "JSONPATH:$.awb"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_AWBgain"
+				],
+				"uid": "http:url:ESP_NAME:AWBgain",
+				"id": "AWBgain",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "AWB gain",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"commandExtension": "/control?var=awb_gain&val=%2$s",
+					"stateTransformation": "JSONPATH:$.awb_gain"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_AEC"
+				],
+				"uid": "http:url:ESP_NAME:AEC",
+				"id": "AEC",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "AEC",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"commandExtension": "/control?var=aec&val=%2$s",
+					"stateTransformation": "JSONPATH:$.aec"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_AECvalue"
+				],
+				"uid": "http:url:ESP_NAME:AECvalue",
+				"id": "AECvalue",
+				"channelTypeUID": "http:dimmer",
+				"itemType": "Dimmer",
+				"kind": "STATE",
+				"label": "AEC value",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1200",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"increaseValue": "1",
+					"decreaseValue": "-1",
+					"stateTransformation": "JSONPATH:$.aec_value",
+					"commandExtension": "/control?var=aec_value&val=%2$s"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_AEC2"
+				],
+				"uid": "http:url:ESP_NAME:AEC2",
+				"id": "AEC2",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "AEC2",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"stateTransformation": "JSONPATH:$.aec2",
+					"commandExtension": "/control?var=aec2&val=%2$s"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_AElevel"
+				],
+				"uid": "http:url:ESP_NAME:AElevel",
+				"id": "AElevel",
+				"channelTypeUID": "http:dimmer",
+				"itemType": "Dimmer",
+				"kind": "STATE",
+				"label": "AE level",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "2",
+					"offValue": "-2",
+					"stateExtension": "/status",
+					"increaseValue": "1",
+					"decreaseValue": "-1",
+					"stateTransformation": "JSONPATH:$.ae_level",
+					"commandExtension": "/control?var=ae_level&val=%2$s"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_AGC"
+				],
+				"uid": "http:url:ESP_NAME:AGC",
+				"id": "AGC",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "AGC",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"stateTransformation": "JSONPATH:$.agc",
+					"commandExtension": "/control?var=agc&val=%2$s"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_AGCgain"
+				],
+				"uid": "http:url:ESP_NAME:AGCgain",
+				"id": "AGCgain",
+				"channelTypeUID": "http:dimmer",
+				"itemType": "Dimmer",
+				"kind": "STATE",
+				"label": "AGC gain",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "30",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"increaseValue": "1",
+					"decreaseValue": "-1",
+					"stateTransformation": "JSONPATH:$.agc_gain",
+					"commandExtension": "/control?var=agc_gain&val=%2$s"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_Gainceiling"
+				],
+				"uid": "http:url:ESP_NAME:Gainceiling",
+				"id": "Gainceiling",
+				"channelTypeUID": "http:dimmer",
+				"itemType": "Dimmer",
+				"kind": "STATE",
+				"label": "Gainceiling",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "6",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"increaseValue": "1",
+					"decreaseValue": "-1",
+					"stateTransformation": "JSONPATH:$.gainceiling",
+					"commandExtension": "/control?var=gainceiling&val=%2$s"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_BPC"
+				],
+				"uid": "http:url:ESP_NAME:BPC",
+				"id": "BPC",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "BPC",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"stateTransformation": "JSONPATH:$.bpc",
+					"commandExtension": "/control?var=bpc&val=%2$s"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_WPC"
+				],
+				"uid": "http:url:ESP_NAME:WPC",
+				"id": "WPC",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "WPC",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"stateTransformation": "JSONPATH:$.wpc",
+					"commandExtension": "/control?var=wpc&val=%2$s"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_RawGMA"
+				],
+				"uid": "http:url:ESP_NAME:RawGMA",
+				"id": "RawGMA",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "Raw GMA",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"stateTransformation": "JSONPATH:$.raw_gma",
+					"commandExtension": "/control?var=raw_gma&val=%2$s"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_Lenc"
+				],
+				"uid": "http:url:ESP_NAME:Lenc",
+				"id": "Lenc",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "Lenc",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"stateTransformation": "JSONPATH:$.lenc",
+					"commandExtension": "/control?var=lenc&val=%2$s"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_DCW"
+				],
+				"uid": "http:url:ESP_NAME:DCW",
+				"id": "DCW",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "DCW",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1",
+					"offValue": "0",
+					"stateExtension": "/status",
+					"stateTransformation": "JSONPATH:$.dcw",
+					"commandExtension": "/control?var=dcw&val=%2$s"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_Quality"
+				],
+				"uid": "http:url:ESP_NAME:Quality",
+				"id": "Quality",
+				"channelTypeUID": "http:dimmer",
+				"itemType": "Dimmer",
+				"kind": "STATE",
+				"label": "Quality",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "63",
+					"offValue": "10",
+					"stateExtension": "/status",
+					"increaseValue": "1",
+					"decreaseValue": "-1",
+					"stateTransformation": "JSONPATH:$.quality",
+					"commandExtension": "/control?var=quality&val=%2$s"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_Contrast"
+				],
+				"uid": "http:url:ESP_NAME:Contrast",
+				"id": "Contrast",
+				"channelTypeUID": "http:dimmer",
+				"itemType": "Dimmer",
+				"kind": "STATE",
+				"label": "Contrast",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "2",
+					"offValue": "-2",
+					"stateExtension": "/status",
+					"increaseValue": "1",
+					"decreaseValue": "-1",
+					"commandExtension": "/control?var=contrast&val=%2$s",
+					"stateTransformation": "JSONPATH:$.contrast"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Camera_Framesize"
+				],
+				"uid": "http:url:ESP_NAME:Framesize",
+				"id": "Framesize",
+				"channelTypeUID": "http:dimmer",
+				"itemType": "Dimmer",
+				"kind": "STATE",
+				"label": "Framesize",
+				"description": "",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"decreaseValue": "-1",
+					"stateExtension": "/status",
+					"commandExtension": "/control?var=framesize&val=%2$s",
+					"stateTransformation": "JSONPATH:$.framesize",
+					"increaseValue": "1"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_System_Reboot"
+				],
+				"uid": "http:url:ESP_NAME:Reboot",
+				"id": "Reboot",
+				"channelTypeUID": "http:contact",
+				"itemType": "Contact",
+				"kind": "STATE",
+				"label": "Reboot",
+				"description": "",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"mode": "WRITEONLY",
+					"openValue": "1",
+					"commandExtension": "/control?var=reboot&val=1",
+					"closedValue": "0"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Lamp_Auto"
+				],
+				"uid": "http:url:ESP_NAME:Lamp_Auto",
+				"id": "Lamp_Auto",
+				"channelTypeUID": "http:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "Auto Lamp",
+				"description": "",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"onValue": "1",
+					"stateExtension": "/status",
+					"offValue": "0",
+					"stateTransformation": "JSONPATH:$.autolamp",
+					"commandExtension": "/control?var=autolamp&var=%2$s"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Preferences_Clear"
+				],
+				"uid": "http:url:ESP_NAME:ClearPreferences",
+				"id": "ClearPreferences",
+				"channelTypeUID": "http:contact",
+				"itemType": "Contact",
+				"kind": "STATE",
+				"label": "Clear Preferences",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"mode": "WRITEONLY",
+					"openValue": "1",
+					"commandExtension": "/control?var=clear_prefs&val=1",
+					"closedValue": "0"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Preferences_Save"
+				],
+				"uid": "http:url:ESP_NAME:SavePreferences",
+				"id": "SavePreferences",
+				"channelTypeUID": "http:contact",
+				"itemType": "Contact",
+				"kind": "STATE",
+				"label": "Save Preferences",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"mode": "WRITEONLY",
+					"openValue": "1",
+					"commandExtension": "/control?var=save_prefs&val=1",
+					"closedValue": "0"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Network",
+					"ESP_NAME_Network_MAC",
+					"ESP_NAME_Network_PreviousStreams",
+					"ESP_NAME_Network_IP",
+					"ESP_NAME_Network_ImagesCaptured",
+					"ESP_NAME_Network_Netmask",
+					"ESP_NAME_Network_ActiveStreams",
+					"ESP_NAME_System_Heap",
+					"ESP_NAME_System_HeapFree",
+					"ESP_NAME_System_HeapMinFree",
+					"ESP_NAME_System_HeapMaxBlock",
+					"ESP_NAME_System_RAM",
+					"ESP_NAME_System_RAMfree",
+					"ESP_NAME_System_RAMminFree",
+					"ESP_NAME_System_RAMmaxBlock",
+					"ESP_NAME_System_FS",
+					"ESP_NAME_System_FSused",
+					"ESP_NAME_System_EnrolledFaces",
+					"ESP_NAME_System_Uptime",
+					"ESP_NAME_Network_RSSI",
+					"ESP_NAME_System_MCUtemperature",
+					"ESP_NAME_Network_SSID"
+				],
+				"uid": "http:url:ESP_NAME:ESP_Dump",
+				"id": "ESP_Dump",
+				"channelTypeUID": "http:string",
+				"itemType": "String",
+				"kind": "STATE",
+				"label": "Dump",
+				"description": "",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"mode": "READWRITE",
+					"stateExtension": "/dump",
+					"commandExtension": "/dump"
+				}
+			}
+		]
+	}
+]

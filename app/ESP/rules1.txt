@@ -1,0 +1,57 @@
+// -- -- EVENT RULES -- -- //
+
+// System events
+on Time#Initialized do
+    Publish,ESP/8266/%unit%/system/started,%systime%
+endon
+on System#Boot do
+    Publish ESP/8266/%unit%/system/status,Boot
+    timerSet,1,30
+endon
+on System#Sleep do
+    Publish ESP/8266/%unit%/system/status,Sleep
+endon
+on System#Wake do
+    Publish ESP/8266/%unit%/system/status,Wake
+endon
+on WiFi#Connected do
+    Publish ESP/8266/%unit%/system/status,Connected
+endon
+
+// Network events
+on Login#Failed do
+    Publish ESP/8266/%unit%/network/login,Failed
+endon
+on WiFi#APmodeEnabled do
+    Publish ESP/8266/%unit%/network/access_point,Connected
+endon
+on WiFi#APmodeDisabled do
+    Publish,ESP/8266/%unit%/network/access_point,Disconnected
+endon
+on WiFi#ChangedAccesspoint do
+    Publish ESP/8266/%unit%/network/access_point,Changed
+endon
+
+// MQTT events
+on MQTT#Connected do
+    Publish ESP/8266/%unit%/mqtt/status,Connected
+endon
+on MQTT#Disconnected do
+    Publish ESP/8266/%unit%/mqtt/status,Disconnected
+endon
+
+// MQTT import events
+on MQTTimport#Connected do
+    Publish ESP/8266/%unit%/mqtt_import/status,Connected
+endon
+on MQTTimport#Disconnected do
+    Publish ESP/8266/%unit%/mqtt_import/status,Disconnected
+    Reboot
+endon
+
+// Timer event for Heartbeat purpose
+On Rules#Timer=1 do
+    Publish ESP/8266/%unit%/LWT,Connected
+    Publish ESP/8266/%unit%/system/time,%unixtime%
+    timerSet,1,30
+endon

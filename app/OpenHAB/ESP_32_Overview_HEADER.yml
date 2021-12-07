@@ -1,0 +1,111 @@
+config:
+  label: ESP-32-Overview
+  layoutType: fixed
+blocks: []
+masonry: null
+grid:
+  - component: oh-grid-item
+    config:
+      x: 0
+      y: 0
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Name
+            background: grey
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 2
+      y: 0
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Ref
+            background: grey
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 4
+      y: 0
+      h: 1
+      w: 3
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Version
+            background: grey
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 7
+      y: 0
+      h: 1
+      w: 1
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Lamp
+            background: grey
+            fontSize: "18"
+          slots: null
+  - component: oh-grid-item
+    config:
+      x: 8
+      y: 0
+      h: 1
+      w: 3
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: "Face: detect, reco, enrol"
+            background: grey
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 11
+      y: 0
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Heap
+            background: grey
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 13
+      y: 0
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: RAM
+            background: grey
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 15
+      y: 0
+      h: 1
+      w: 1
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Reboot
+            background: grey
+            fontSize: "18"

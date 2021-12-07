@@ -1,0 +1,77 @@
+<div style="position: absolute;
+						top: 0;
+						bottom: 0;
+						left: -10px; right: -10px;
+						background: url('http://domo:8080/static/images/0_ground_floor.png');
+						background-size: cover;
+						background-repeat: no-repeat;">
+
+	<!-- 14_Entry -->
+	<div style="position: absolute; 
+			background: rgba(0,0,0,0.5); 
+			border-radius: 20px; 
+			top: 450px; left: 300px; 
+			width: 100px; height: 133px;">
+		<div class="row" id="14_Entry_Door" style="margin-top: 2px;">
+		    <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'door-handle'" size="24" state="itemValue('14_Entry_Door')=='OFF' ? 'OFF':'ON'" /></span></div>
+		    <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('14_Entry_Door')}}</span></div>
+		</div>
+    </div>
+  
+	<!-- 15_Entry -->
+	<div style="position: absolute; 
+			background: rgba(0,0,0,0.5); 
+			border-radius: 20px; 
+			top: 450px; left: 170px; 
+			width: 100px; height: 133px;">
+    <div class="row" id="15_Entry_System_Alert" style="margin-top: 2px;">
+        <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'power'" size="24" state="itemValue('15_Entry_System_Alert')=='OFF' ? 'OFF':'ON'" /></span></div>
+        <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('15_Entry_System_Alert')}}</span></div>
+    </div>
+    <div class="row" id="15_Entry_Sensor_Alert" style="margin-top: 2px;">
+        <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'eye'" size="24" state="itemValue('15_Entry_Sensor_Alert')=='OFF' ? 'OFF':'ON'" /></span></div>
+        <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('15_Entry_Sensor_Alert')}}</span></div>
+    </div>	
+    <div class="row" id="15_Entry_Sensor_Temperature" style="margin-top: 2px;">
+        <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'temperature'" size="24" state="itemValue('15_Entry_Sensor_Temperature')>20 ? 'OFF':'ON'" /></span></div>
+        <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('15_Entry_Sensor_Temperature')}}°C</span></div>
+    </div>
+    <div class="row" id="15_Entry_Sensor_Humidity" style="margin-top: 2px;">
+        <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'drop'" size="24" state="itemValue('15_Entry_Sensor_Humidity')<50 ? 'OFF':'ON'" /></span></div>
+        <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('15_Entry_Sensor_Humidity')}}%</span></div>
+    </div>
+    <div class="row" id="15_Entry_Sensor_Pressure" style="margin-top: 2px;">
+        <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'thermostat'" size="24" state="itemValue('15_Entry_Sensor_Pressure')<1000 ? 'OFF':'ON'" /></span></div>
+        <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{'%.02f' | sprintf:itemValue('15_Entry_Sensor_Pressure')/10000}}<small style="font-size:8pt">MPa</small></span></div>
+    </div>
+  </div>
+  
+	<!-- 17_Kitchen -->
+  <div style="position: absolute; 
+        background: rgba(0,0,0,0.5); 
+        border-radius: 20px; 
+        top: 215px; left: 1000px; 
+        width: 100px; height: 133px;">
+    <div class="row" id="17_Kitchen_System_Alert" style="margin-top: 2px;">
+        <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'power'" size="24" state="itemValue('17_Kitchen_System_Alert')=='OFF' ? 'OFF':'ON'" /></span></div>
+        <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('17_Kitchen_System_Alert')}}</span></div>
+    </div>
+    <div class="row" id="17_Kitchen_Sensor_Alert" style="margin-top: 2px;">
+        <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'eye'" size="24" state="itemValue('17_Kitchen_Sensor_Alert')=='OFF' ? 'OFF':'ON'" /></span></div>
+        <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('17_Kitchen_Sensor_Alert')}}</span></div>
+    </div>	
+    <div class="row" id="17_Kitchen_Sensor_Temperature" style="margin-top: 2px;">
+        <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'temperature'" size="24" state="itemValue('17_Kitchen_Sensor_Temperature')>20 ? 'OFF':'ON'" /></span></div>
+        <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('17_Kitchen_Sensor_Temperature')}}°C</span></div>
+    </div>
+    <div class="row" id="17_Kitchen_Sensor_Humidity" style="margin-top: 2px;">
+        <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'drop'" size="24" state="itemValue('17_Kitchen_Sensor_Humidity')<50 ? 'OFF':'ON'" /></span></div>
+        <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('17_Kitchen_Sensor_Humidity')}}%</span></div>
+    </div>
+    <div class="row" id="17_Kitchen_Sensor_Pressure" style="margin-top: 2px;">
+        <div class="col-xs-3" style="margin-left: 5px;"><span><widget-icon iconset="'smarthome-set'" icon="'thermostat'" size="24" state="itemValue('17_Kitchen_Sensor_Pressure')<1000 ? 'OFF':'ON'" /></span></div>
+        <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{'%.02f' | sprintf:itemValue('17_Kitchen_Sensor_Pressure')/10000}}<small style="font-size:8pt">MPa</small></span></div>
+    </div>
+  </div>
+    
+</div>

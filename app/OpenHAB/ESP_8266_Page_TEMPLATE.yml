@@ -1,0 +1,482 @@
+config:
+  layoutType: fixed
+  colNum: 21
+  showFullscreenIcon: true
+  label: ESP_NAME
+  sidebar: true
+  order: "ESP_REFERENCE"
+blocks: []
+masonry: null
+grid:
+  - component: oh-grid-item
+    config:
+      x: 8
+      y: 0
+      h: 1
+      w: 9
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: System
+            background: grey
+            icon: oh:status
+            iconUseState: true
+  - component: oh-grid-item
+    config:
+      x: 10
+      y: 1
+      h: 2
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_System_Status
+            title: Status
+            vertical: true
+            fontSize: "18"
+            iconUseState: true
+  - component: oh-grid-item
+    config:
+      x: 10
+      y: 3
+      h: 2
+      w: 3
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            title: Load
+            fontSize: "18"
+            iconUseState: true
+            trendItem: ESP_NAME_System_Load
+            label: " "
+  - component: oh-grid-item
+    config:
+      x: 8
+      y: 3
+      h: 2
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_System_Uptime
+            fontSize: "18"
+            iconUseState: true
+            vertical: true
+            title: Uptime
+            trendItem: ESP_NAME_System_Uptime
+  - component: oh-grid-item
+    config:
+      x: 12
+      y: 1
+      h: 2
+      w: 5
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_System_Time
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 15
+      y: 5
+      h: 2
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            title: Reboot
+            action: command
+            actionItem: ESP_NAME_System_Reboot
+            actionCommand: "2"
+            item: ESP_NAME_System_Reboot
+            icon: oh:switch
+            vertical: true
+            fontSize: "18"
+            label: " "
+  - component: oh-grid-item
+    config:
+      x: 15
+      y: 3
+      h: 2
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            title: Reload
+            action: command
+            actionItem: ESP_NAME_System_Reload
+            actionCommand: "3"
+            item: ESP_NAME_System_Reload
+            icon: oh:switch
+            vertical: true
+            fontSize: "18"
+            label: " "
+  - component: oh-grid-item
+    config:
+      x: 17
+      y: 0
+      h: 1
+      w: 4
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Network
+            background: grey
+            icon: oh:network
+            iconUseState: true
+  - component: oh-grid-item
+    config:
+      x: 17
+      y: 1
+      h: 2
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            title: MQTT Status
+            item: ESP_NAME_MQTT_Status
+            fontSize: "18"
+            vertical: true
+  - component: oh-grid-item
+    config:
+      x: 19
+      y: 1
+      h: 2
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            title: MQTT import
+            item: ESP_NAME_MQTT_ImportStatus
+            vertical: true
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 19
+      y: 3
+      h: 2
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            title: RSSI
+            item: ESP_NAME_Network_WifiRSSI
+            fontSize: "18"
+            vertical: true
+            trendItem: ESP_NAME_Network_WifiRSSI
+  - component: oh-grid-item
+    config:
+      x: 17
+      y: 3
+      h: 2
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            title: Activity
+            item: ESP_NAME_Network_WebActivity
+            fontSize: "18"
+            vertical: true
+            trendItem: ESP_NAME_Network_WebActivity
+  - component: oh-grid-item
+    config:
+      x: 10
+      y: 5
+      h: 2
+      w: 3
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            title: Free RAM
+            fontSize: "18"
+            trendItem: ESP_NAME_System_FreeRAM
+            label: " "
+  - component: oh-grid-item
+    config:
+      x: 6
+      y: 4
+      h: 3
+      w: 2
+    slots:
+      default:
+        - component: oh-knob-card
+          config:
+            title: Pressure
+            item: ESP_NAME_Sensor_Pressure
+            min: 0
+            max: 60000
+            stepSize: 1
+            responsive: false
+            size: 100
+  - component: oh-grid-item
+    config:
+      x: 0
+      y: 4
+      h: 3
+      w: 2
+    slots:
+      default:
+        - component: oh-knob-card
+          config:
+            title: Temperature
+            item: ESP_NAME_Sensor_Temperature
+            min: -20
+            max: 40
+  - component: oh-grid-item
+    config:
+      x: 2
+      y: 4
+      h: 3
+      w: 2
+    slots:
+      default:
+        - component: oh-knob-card
+          config:
+            title: Humidity
+            item: ESP_NAME_Sensor_Humidity
+            min: 0
+            max: 100
+  - component: oh-grid-item
+    config:
+      x: 8
+      y: 5
+      h: 2
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            title: Free stack
+            item: ESP_NAME_System_FreeStack
+            fontSize: "18"
+            vertical: true
+            trendItem: ESP_NAME_System_FreeStack
+  - component: oh-grid-item
+    config:
+      x: 4
+      y: 4
+      h: 3
+      w: 2
+    slots:
+      default:
+        - component: oh-knob-card
+          config:
+            title: Luminosity
+            item: ESP_NAME_Sensor_Luminosity
+            max: 65000
+            min: 0
+            stepSize: 1
+  - component: oh-grid-item
+    config:
+      x: 0
+      y: 0
+      h: 1
+      w: 8
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            label: Sensor
+            background: grey
+            icon: oh:colorpicker
+  - component: oh-grid-item
+    config:
+      x: 0
+      y: 1
+      h: 3
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            title: Alert
+            fontSize: "18"
+            item: ESP_NAME_Sensor_Alert
+            trendItem: ESP_NAME_Sensor_Alert
+            icon: oh:alarm
+  - component: oh-grid-item
+    config:
+      x: 0
+      y: 7
+      h: 5
+      w: 8
+    slots:
+      default:
+        - component: oh-webframe-card
+          config:
+            src: http://ESP_IP_ADDRESS/json
+            height: 180
+            title: Export
+  - component: oh-grid-item
+    config:
+      x: 8
+      y: 1
+      h: 2
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            title: Alert
+            item: ESP_NAME_System_Alert
+            icon: oh:alarm
+            trendItem: ESP_NAME_System_Alert
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 13
+      y: 3
+      h: 2
+      w: 2
+    slots:
+      default:
+        - component: oh-knob-card
+          config:
+            item: ESP_NAME_System_Load
+            min: 0
+            max: 100
+  - component: oh-grid-item
+    config:
+      x: 13
+      y: 5
+      h: 2
+      w: 2
+    slots:
+      default:
+        - component: oh-knob-card
+          config:
+            item: ESP_NAME_System_FreeRAM
+            min: 0
+            max: 65536
+  - component: oh-grid-item
+    config:
+      x: 8
+      y: 7
+      h: 5
+      w: 9
+    slots:
+      default:
+        - component: oh-list-card
+          config:
+            simpleList: true
+            title: Info
+          slots:
+            default:
+              - component: oh-label-item
+                config:
+                  title: Name
+                  item: ESP_NAME_System_Name
+              - component: oh-label-item
+                config:
+                  title: Unit
+                  item: ESP_NAME_System_Unit
+              - component: oh-label-item
+                config:
+                  title: Build Git
+                  item: ESP_NAME_System_BuildGit
+              - component: oh-label-item
+                config:
+                  title: Build date
+                  item: ESP_NAME_System_BuildDate
+              - component: oh-list-item
+                config:
+                  title: Update
+                  action: command
+                  actionItem: ESP_NAME_System
+                  listButton: true
+                  actionCommand: "3"
+  - component: oh-grid-item
+    config:
+      x: 17
+      y: 5
+      h: 7
+      w: 4
+    slots:
+      default:
+        - component: oh-list-card
+          config:
+            title: Info
+            simpleList: true
+          slots:
+            default:
+              - component: oh-label-item
+                config:
+                  item: ESP_NAME_Network_MAC
+                  title: MAC
+              - component: oh-label-item
+                config:
+                  item: ESP_NAME_Network_IP
+                  title: IP
+              - component: oh-label-item
+                config:
+                  item: ESP_NAME_Network_Subnet
+                  title: Subnet
+              - component: oh-label-item
+                config:
+                  item: ESP_NAME_Network_Gateway
+                  title: Gateway
+              - component: oh-label-item
+                config:
+                  item: ESP_NAME_Network_DNS
+                  title: DNS
+              - component: oh-label-item
+                config:
+                  item: ESP_NAME_Network_SSID
+                  title: SSID
+              - component: oh-label-item
+                config:
+                  item: ESP_NAME_Network_BSSID
+                  title: BSSID
+              - component: oh-label-item
+                config:
+                  item: ESP_NAME_Network_WifiChannel
+                  title: Wifi channel
+              - component: oh-list-item
+                config:
+                  title: Update
+                  action: command
+                  actionItem: ESP_NAME_Network
+                  actionCommand: "4"
+                  listButton: true
+  - component: oh-grid-item
+    config:
+      x: 2
+      y: 1
+      h: 3
+      w: 6
+    slots:
+      default:
+        - component: oh-list-card
+          config:
+            simpleList: true
+            title: Sensors
+          slots:
+            default:
+              - component: oh-toggle-item
+                config:
+                  title: Presence
+                  item: ESP_NAME_Sensor_Presence
+                  icon: oh:motion
+              - component: oh-toggle-item
+                config:
+                  title: Luminosity
+                  item: ESP_NAME_Sensor_Luminosity_state
+                  icon: oh:light
+              - component: oh-toggle-item
+                config:
+                  title: Sound
+                  item: ESP_NAME_Sensor_Sound
+                  icon: oh:recorder

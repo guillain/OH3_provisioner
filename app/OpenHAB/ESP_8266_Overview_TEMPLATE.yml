@@ -1,0 +1,132 @@
+
+  - component: oh-grid-item
+    config:
+      x: 0
+      y: ROW_REFERENCE
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            action: navigate
+            actionPage: page:ESP_NAME
+            label: ESP_NAME
+            item: ESP_NAME_System_Name
+            fontSize: "18"
+            icon: ESP_ICON
+          slots: null
+  - component: oh-grid-item
+    config:
+      x: 2
+      y: ROW_REFERENCE
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_System_Status
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 4
+      y: ROW_REFERENCE
+      h: 1
+      w: 1
+    slots:
+      default:
+        - component: oh-list-card
+          config:
+            item: 15_Entry_Sensor_Alert
+            color: green
+          slots:
+            default:
+              - component: oh-toggle-item
+                config:
+                  item: ESP_NAME_Sensor_Alert
+                  color: green
+  - component: oh-grid-item
+    config:
+      x: 7
+      y: ROW_REFERENCE
+      h: 1
+      w: 1
+    slots:
+      default:
+        - component: oh-list-card
+          config: {}
+          slots:
+            default:
+              - component: oh-toggle-item
+                config:
+                  item: ESP_NAME_System_Alert
+                  color: green
+                slots: null
+  - component: oh-grid-item
+    config:
+      x: 8
+      y: ROW_REFERENCE
+      h: 1
+      w: 3
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            trendItem: ESP_NAME_System_Load
+            item: ESP_NAME_System_Load
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 11
+      y: ROW_REFERENCE
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_Network_WifiRSSI
+            trendItem: ESP_NAME_Network_WifiRSSI
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 13
+      y: ROW_REFERENCE
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_Network_WebActivity
+            trendItem: ESP_NAME_Network_WebActivity
+            fontSize: "18"
+  - component: oh-grid-item
+    config:
+      x: 15
+      y: ROW_REFERENCE
+      h: 1
+      w: 1
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            action: command
+            actionItem: ESP_NAME_System_Reboot
+            fontSize: "18"
+            label: " "
+            icon: oh:switch
+  - component: oh-grid-item
+    config:
+      x: 5
+      y: ROW_REFERENCE
+      h: 1
+      w: 2
+    slots:
+      default:
+        - component: oh-label-card
+          config:
+            item: ESP_NAME_Sensor_Temperature
+            trendItem: ESP_NAME_Sensor_Temperature
+            fontSize: "18"

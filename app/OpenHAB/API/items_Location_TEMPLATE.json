@@ -1,0 +1,348 @@
+[
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/Category",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "Category",
+		"label": "ZZZ_Category",
+		"category": "status",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			""
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/System",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "System",
+		"label": "System",
+		"category": "status",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"Category"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/Network",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "Network",
+		"label": "Network",
+		"category": "status",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"Category"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/Preferences",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "Preferences",
+		"label": "Preferences",
+		"category": "status",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"Category"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/Camera",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "Camera",
+		"label": "Camera",
+		"category": "status",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"Category"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/Sensor",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "Sensor",
+		"label": "Sensor",
+		"category": "status",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"Category"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/Entry",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "Entry",
+		"label": "Entry",
+		"category": "frontdoor",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"GroundFloor"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/FirstFloor",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "FirstFloor",
+		"label": "1 - First floor",
+		"category": "firstfloor",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"House"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/Garden",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "Garden",
+		"label": "Garden",
+		"category": "garden",
+		"tags": [
+			"Location"
+		],
+		"groupNames": []
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/LivingRoom",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "LivingRoom",
+		"label": "Living Room",
+		"category": "groundfloor",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"GroundFloor"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/Lab",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "Lab",
+		"label": "Lab",
+		"category": "attic",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"DeskRoom"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/Guillain",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "Guillain",
+		"label": "Guillain",
+		"category": "bedroom",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"SecondFloor"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/BathRoom",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "BathRoom",
+		"label": "bathroom",
+		"category": "bath",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"FirstFloor"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/Garage",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "Garage",
+		"label": "Garage",
+		"category": "garage_detached",
+		"tags": [
+			"Location"
+		],
+		"groupNames": []
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/SecondFloor",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "SecondFloor",
+		"label": "2 - Second floor",
+		"category": "attic",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"House"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/Kitchen",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "Kitchen",
+		"label": "Kitchen",
+		"category": "kitchen",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"GroundFloor"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/FriendRoom",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "FriendRoom",
+		"label": "Friend room",
+		"category": "bedroom_red",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"FirstFloor"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/Nina",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "Nina",
+		"label": "Nina",
+		"category": "bedroom_blue",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"FirstFloor"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/Luca",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "Luca",
+		"label": "Luca",
+		"category": "bedroom_orange",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"FirstFloor"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/House",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "House",
+		"label": "House",
+		"category": "house",
+		"tags": [
+			"Location"
+		],
+		"groupNames": []
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/GroundFloor",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "GroundFloor",
+		"label": "0 - Ground floor",
+		"category": "groundfloor",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"House"
+		]
+	},
+	{
+		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/DeskRoom",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "DeskRoom",
+		"label": "Deskroom",
+		"category": "office",
+		"tags": [
+			"Location"
+		],
+		"groupNames": [
+			"SecondFloor"
+		]
+	}
+]

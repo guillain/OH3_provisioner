@@ -1,0 +1,1395 @@
+[
+    {
+        "members": [],
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME",
+        "state": "NULL",
+        "editable": true,
+        "type": "Group",
+        "name": "ESP_NAME",
+        "label": "ESP_NAME",
+        "category": "player",
+        "tags": [
+            "Equipment"
+        ],
+        "groupNames": [
+            "ESP_LOCATION"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System_Name",
+        "state": "ESP_NAME",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_System_Name",
+        "label": "Name",
+        "category": "",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Network_WebActivity",
+        "state": "27239",
+        "stateDescription": {
+            "minimum": 0,
+            "step": 1,
+            "pattern": "%s nb",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Number",
+        "name": "ESP_NAME_Network_WebActivity",
+        "label": "Web Activity",
+        "category": "qualityofservice",
+        "tags": [
+			"Opening",
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Network"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Sensor_Presence",
+        "state": "OFF",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Switch",
+        "name": "ESP_NAME_Sensor_Presence",
+        "label": "Presence",
+        "category": "motion",
+        "tags": [
+            "Presence",
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Sensor"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System_FreeRAM",
+        "state": "20568",
+        "stateDescription": {
+            "minimum": 0,
+            "maximum": 1073741824,
+            "step": 1,
+            "pattern": "%s byte",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Number",
+        "name": "ESP_NAME_System_FreeRAM",
+        "label": "Free RAM",
+        "category": "chart",
+        "tags": [
+			"Level",
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_MQTT_ImportStatus",
+        "state": "NULL",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": true,
+            "options": [
+                {
+                    "value": "Connection lost",
+                    "label": "Connection lost"
+                },
+                {
+                    "value": "Load",
+                    "label": "Load"
+                },
+                {
+                    "value": "Sleep",
+                    "label": "Sleep"
+                },
+                {
+                    "value": "Connected",
+                    "label": "Connected"
+                },
+                {
+                    "value": "Failed",
+                    "label": "Failed"
+                },
+                {
+                    "value": "Ok",
+                    "label": "Ok"
+                },
+                {
+                    "value": "Boot",
+                    "label": "Boot"
+                },
+                {
+                    "value": "Wake",
+                    "label": "Wake"
+                },
+                {
+                    "value": "Disconnected",
+                    "label": "Disconnected"
+                },
+                {
+                    "value": "Reboot",
+                    "label": "Reboot"
+                }
+            ]
+        },
+        "commandDescription": {
+            "commandOptions": [
+                {
+                    "command": "Connection lost",
+                    "label": "Connection lost"
+                },
+                {
+                    "command": "Load",
+                    "label": "Load"
+                },
+                {
+                    "command": "Sleep",
+                    "label": "Sleep"
+                },
+                {
+                    "command": "Connected",
+                    "label": "Connected"
+                },
+                {
+                    "command": "Failed",
+                    "label": "Failed"
+                },
+                {
+                    "command": "Ok",
+                    "label": "Ok"
+                },
+                {
+                    "command": "Boot",
+                    "label": "Boot"
+                },
+                {
+                    "command": "Wake",
+                    "label": "Wake"
+                },
+                {
+                    "command": "Disconnected",
+                    "label": "Disconnected"
+                },
+                {
+                    "command": "Reboot",
+                    "label": "Reboot"
+                }
+            ]
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_MQTT_ImportStatus",
+        "label": "MQTT Import Status",
+        "category": "status",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"MQTT"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System_Status",
+        "state": "Connected",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": true,
+            "options": [
+                {
+                    "value": "Connection lost",
+                    "label": "Connection lost"
+                },
+                {
+                    "value": "Load",
+                    "label": "Load"
+                },
+                {
+                    "value": "Sleep",
+                    "label": "Sleep"
+                },
+                {
+                    "value": "Connected",
+                    "label": "Connected"
+                },
+                {
+                    "value": "Failed",
+                    "label": "Failed"
+                },
+                {
+                    "value": "Ok",
+                    "label": "Ok"
+                },
+                {
+                    "value": "Boot",
+                    "label": "Boot"
+                },
+                {
+                    "value": "Wake",
+                    "label": "Wake"
+                },
+                {
+                    "value": "Disconnected",
+                    "label": "Disconnected"
+                },
+                {
+                    "value": "Reboot",
+                    "label": "Reboot"
+                }
+            ]
+        },
+        "commandDescription": {
+            "commandOptions": [
+                {
+                    "command": "Connection lost",
+                    "label": "Connection lost"
+                },
+                {
+                    "command": "Load",
+                    "label": "Load"
+                },
+                {
+                    "command": "Sleep",
+                    "label": "Sleep"
+                },
+                {
+                    "command": "Connected",
+                    "label": "Connected"
+                },
+                {
+                    "command": "Failed",
+                    "label": "Failed"
+                },
+                {
+                    "command": "Ok",
+                    "label": "Ok"
+                },
+                {
+                    "command": "Boot",
+                    "label": "Boot"
+                },
+                {
+                    "command": "Wake",
+                    "label": "Wake"
+                },
+                {
+                    "command": "Disconnected",
+                    "label": "Disconnected"
+                },
+                {
+                    "command": "Reboot",
+                    "label": "Reboot"
+                }
+            ]
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_System_Status",
+        "label": "Status",
+        "category": "status",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Sensor_Luminosity",
+        "state": "23",
+        "stateDescription": {
+            "minimum": 0,
+            "maximum": 1024,
+            "step": 1,
+            "pattern": "%s",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Number",
+        "name": "ESP_NAME_Sensor_Luminosity",
+        "label": "Luminosity",
+        "category": "light",
+        "tags": [
+			"Light",
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Sensor"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Sensor_LuminosityState",
+        "state": "ON",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Switch",
+        "name": "ESP_NAME_Sensor_LuminosityState",
+        "label": "Luminosity",
+        "category": "light",
+        "tags": [
+			"Opening",
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Sensor"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System_Reboot",
+        "state": "Connected",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": [
+                {
+                    "value": "Connection lost",
+                    "label": "Connection lost"
+                },
+                {
+                    "value": "Load",
+                    "label": "Load"
+                },
+                {
+                    "value": "Sleep",
+                    "label": "Sleep"
+                },
+                {
+                    "value": "Connected",
+                    "label": "Connected"
+                },
+                {
+                    "value": "ok",
+                    "label": "ok"
+                },
+                {
+                    "value": "Boot",
+                    "label": "Boot"
+                },
+                {
+                    "value": "Wake",
+                    "label": "Wake"
+                },
+                {
+                    "value": "Disconnected",
+                    "label": "Disconnected"
+                },
+                {
+                    "value": "Reboot",
+                    "label": "Reboot"
+                }
+            ]
+        },
+        "commandDescription": {
+            "commandOptions": [
+                {
+                    "command": "Connection lost",
+                    "label": "Connection lost"
+                },
+                {
+                    "command": "Load",
+                    "label": "Load"
+                },
+                {
+                    "command": "Sleep",
+                    "label": "Sleep"
+                },
+                {
+                    "command": "Connected",
+                    "label": "Connected"
+                },
+                {
+                    "command": "ok",
+                    "label": "ok"
+                },
+                {
+                    "command": "Boot",
+                    "label": "Boot"
+                },
+                {
+                    "command": "Wake",
+                    "label": "Wake"
+                },
+                {
+                    "command": "Disconnected",
+                    "label": "Disconnected"
+                },
+                {
+                    "command": "Reboot",
+                    "label": "Reboot"
+                }
+            ]
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_System_Reboot",
+        "label": "Reboot",
+        "category": "switch",
+        "tags": [
+			"Opening",
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Network_IP",
+        "state": "10.1.1.116",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_Network_IP",
+        "label": "IP",
+        "category": "network",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Network"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Sensor_Sound",
+        "state": "OFF",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Switch",
+        "name": "ESP_NAME_Sensor_Sound",
+        "label": "Sound",
+        "category": "recorder",
+        "tags": [
+            "Point",
+            "Opening"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Sensor"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System_Uptime",
+        "state": "1900",
+        "stateDescription": {
+            "minimum": 0,
+            "step": 1,
+            "pattern": "%s min",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Number",
+        "name": "ESP_NAME_System_Uptime",
+        "label": "Uptime",
+        "category": "time",
+        "tags": [
+			"Duration",
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System_Unit",
+        "state": "16",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "Number",
+        "name": "ESP_NAME_System_Unit",
+        "label": "Unit",
+        "category": "",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Sensor_Humidity",
+        "state": "0",
+        "stateDescription": {
+            "minimum": 0,
+            "maximum": 100,
+            "step": 1,
+            "pattern": "%s %%",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Number",
+        "name": "ESP_NAME_Sensor_Humidity",
+        "label": "Humidity",
+        "category": "humidity",
+        "tags": [
+            "Humidity",
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Sensor"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Network_Subnet",
+        "state": "255.255.255.0",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_Network_Subnet",
+        "label": "Subnet",
+        "category": "network",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Network"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System_BuildDate",
+        "state": "Oct    5 2021",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_System_BuildDate",
+        "label": "Build Date",
+        "category": "calendar",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System_Time",
+        "state": "2021-11-24T23:07:32.000+0000",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "DateTime",
+        "name": "ESP_NAME_System_Time",
+        "label": "Time",
+        "category": "time",
+        "tags": [
+			"Timestamp",
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Sensor_Alert",
+        "state": "ON",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Switch",
+        "name": "ESP_NAME_Sensor_Alert",
+        "label": "Sensor Alert",
+        "category": "alarm",
+        "tags": [
+			"Opening",
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Sensor"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System_Alert",
+        "state": "OFF",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Switch",
+        "name": "ESP_NAME_System_Alert",
+        "label": "System Alert",
+        "category": "error",
+        "tags": [
+			"Opening",
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Network_APStatus",
+        "state": "NULL",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": true,
+            "options": [
+                {
+                    "value": "Connection lost",
+                    "label": "Connection lost"
+                },
+                {
+                    "value": "Load",
+                    "label": "Load"
+                },
+                {
+                    "value": "Sleep",
+                    "label": "Sleep"
+                },
+                {
+                    "value": "Connected",
+                    "label": "Connected"
+                },
+                {
+                    "value": "Failed",
+                    "label": "Failed"
+                },
+                {
+                    "value": "Ok",
+                    "label": "Ok"
+                },
+                {
+                    "value": "Boot",
+                    "label": "Boot"
+                },
+                {
+                    "value": "Wake",
+                    "label": "Wake"
+                },
+                {
+                    "value": "Disconnected",
+                    "label": "Disconnected"
+                },
+                {
+                    "value": "Reboot",
+                    "label": "Reboot"
+                }
+            ]
+        },
+        "commandDescription": {
+            "commandOptions": [
+                {
+                    "command": "Connection lost",
+                    "label": "Connection lost"
+                },
+                {
+                    "command": "Load",
+                    "label": "Load"
+                },
+                {
+                    "command": "Sleep",
+                    "label": "Sleep"
+                },
+                {
+                    "command": "Connected",
+                    "label": "Connected"
+                },
+                {
+                    "command": "Failed",
+                    "label": "Failed"
+                },
+                {
+                    "command": "Ok",
+                    "label": "Ok"
+                },
+                {
+                    "command": "Boot",
+                    "label": "Boot"
+                },
+                {
+                    "command": "Wake",
+                    "label": "Wake"
+                },
+                {
+                    "command": "Disconnected",
+                    "label": "Disconnected"
+                },
+                {
+                    "command": "Reboot",
+                    "label": "Reboot"
+                }
+            ]
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_Network_APStatus",
+        "label": "AP Status",
+        "category": "status",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Network"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Network_WifiRSSI",
+        "state": "-19",
+        "stateDescription": {
+            "minimum": -90,
+            "maximum": 0,
+            "step": 1,
+            "pattern": "%s dbm",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Number",
+        "name": "ESP_NAME_Network_WifiRSSI",
+        "label": "Wifi RSSI",
+        "category": "network",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Network"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Sensor_Temperature",
+        "state": "22.69",
+        "stateDescription": {
+            "minimum": -20,
+            "maximum": 50,
+            "step": 1,
+            "pattern": "%s °C",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Number",
+        "name": "ESP_NAME_Sensor_Temperature",
+        "label": "Temperature",
+        "category": "temperature",
+        "tags": [
+            "Temperature",
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Sensor"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Network_WifiChannel",
+        "state": "1",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "Number",
+        "name": "ESP_NAME_Network_WifiChannel",
+        "label": "Wifi Channel",
+        "category": "network",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Network"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System_FreeStack",
+        "state": "3280",
+        "stateDescription": {
+            "minimum": 0,
+            "maximum": 1073741824,
+            "step": 1,
+            "pattern": "%s byte",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Number",
+        "name": "ESP_NAME_System_FreeStack",
+        "label": "Free Stack",
+        "category": "pie",
+        "tags": [
+			"Level",
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Sensor_Pressure",
+        "state": "989.92",
+        "stateDescription": {
+            "minimum": 0,
+            "maximum": 100000,
+            "step": 1,
+            "pattern": "%s hp",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Number",
+        "name": "ESP_NAME_Sensor_Pressure",
+        "label": "Pressure",
+        "category": "pressure",
+        "tags": [
+            "Point",
+            "Pressure"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Sensor"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System_Reload",
+        "state": "Connected",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": [
+                {
+                    "value": "Connection lost",
+                    "label": "Connection lost"
+                },
+                {
+                    "value": "Load",
+                    "label": "Load"
+                },
+                {
+                    "value": "Sleep",
+                    "label": "Sleep"
+                },
+                {
+                    "value": "Connected",
+                    "label": "Connected"
+                },
+                {
+                    "value": "ok",
+                    "label": "ok"
+                },
+                {
+                    "value": "Boot",
+                    "label": "Boot"
+                },
+                {
+                    "value": "Wake",
+                    "label": "Wake"
+                },
+                {
+                    "value": "Disconnected",
+                    "label": "Disconnected"
+                },
+                {
+                    "value": "Reboot",
+                    "label": "Reboot"
+                }
+            ]
+        },
+        "commandDescription": {
+            "commandOptions": [
+                {
+                    "command": "Connection lost",
+                    "label": "Connection lost"
+                },
+                {
+                    "command": "Load",
+                    "label": "Load"
+                },
+                {
+                    "command": "Sleep",
+                    "label": "Sleep"
+                },
+                {
+                    "command": "Connected",
+                    "label": "Connected"
+                },
+                {
+                    "command": "ok",
+                    "label": "ok"
+                },
+                {
+                    "command": "Boot",
+                    "label": "Boot"
+                },
+                {
+                    "command": "Wake",
+                    "label": "Wake"
+                },
+                {
+                    "command": "Disconnected",
+                    "label": "Disconnected"
+                },
+                {
+                    "command": "Reboot",
+                    "label": "Reboot"
+                }
+            ]
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_System_Reload",
+        "label": "Reload",
+        "category": "switch",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Network_MAC",
+        "state": "8C:AA:B5:7A:CF:A4",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_Network_MAC",
+        "label": "MAC",
+        "category": "network",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Network"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Status",
+        "state": "NULL",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_Status",
+        "label": "JSON Status",
+        "category": "text",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Status"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Network_SSID",
+        "state": "Domo",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_Network_SSID",
+        "label": "SSID",
+        "category": "network",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Network"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Network_Gateway",
+        "state": "10.1.1.1",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_Network_Gateway",
+        "label": "Gateway",
+        "category": "network",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Network"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_MQTT_Status",
+        "state": "Connected",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": true,
+            "options": [
+                {
+                    "value": "Connection lost",
+                    "label": "Connection lost"
+                },
+                {
+                    "value": "Load",
+                    "label": "Load"
+                },
+                {
+                    "value": "Sleep",
+                    "label": "Sleep"
+                },
+                {
+                    "value": "Connected",
+                    "label": "Connected"
+                },
+                {
+                    "value": "Failed",
+                    "label": "Failed"
+                },
+                {
+                    "value": "Ok",
+                    "label": "Ok"
+                },
+                {
+                    "value": "Boot",
+                    "label": "Boot"
+                },
+                {
+                    "value": "Wake",
+                    "label": "Wake"
+                },
+                {
+                    "value": "Disconnected",
+                    "label": "Disconnected"
+                },
+                {
+                    "value": "Reboot",
+                    "label": "Reboot"
+                }
+            ]
+        },
+        "commandDescription": {
+            "commandOptions": [
+                {
+                    "command": "Connection lost",
+                    "label": "Connection lost"
+                },
+                {
+                    "command": "Load",
+                    "label": "Load"
+                },
+                {
+                    "command": "Sleep",
+                    "label": "Sleep"
+                },
+                {
+                    "command": "Connected",
+                    "label": "Connected"
+                },
+                {
+                    "command": "Failed",
+                    "label": "Failed"
+                },
+                {
+                    "command": "Ok",
+                    "label": "Ok"
+                },
+                {
+                    "command": "Boot",
+                    "label": "Boot"
+                },
+                {
+                    "command": "Wake",
+                    "label": "Wake"
+                },
+                {
+                    "command": "Disconnected",
+                    "label": "Disconnected"
+                },
+                {
+                    "command": "Reboot",
+                    "label": "Reboot"
+                }
+            ]
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_MQTT_Status",
+        "label": "MQTT Status",
+        "category": "status",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"MQTT"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Network_DNS",
+        "state": "8.8.8.8 / (IP unset)",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_Network_DNS",
+        "label": "DNS",
+        "category": "network",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Network"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System_BuildGit",
+        "state": "Domo build: Oct    5 2021 07:01:57",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_System_BuildGit",
+        "label": "Build Git",
+        "category": "settings",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System",
+        "state": "{\"Name\": \"ESP_NAME\", \"Unit\": \"16\", \"Load\": \"8.86\", \"Heap\": \"19776\", \"Stack\": \"3072\", \"Time\": \"22:56:36\", \"Uptime\": \"1889\", \"Build_Git\": \"Domo build: Oct    5 2021 07:01:57\", \"Build_Date\": \"Oct    5 2021\", \"timestamp\": \"1637794596\"}",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_System",
+        "label": "JSON System",
+        "category": "text",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System_Load",
+        "state": "10.61",
+        "stateDescription": {
+            "minimum": 0,
+            "maximum": 100,
+            "step": 1,
+            "pattern": "%s %%",
+            "readOnly": true,
+            "options": []
+        },
+        "editable": true,
+        "type": "Dimmer",
+        "name": "ESP_NAME_System_Load",
+        "label": "System Load",
+        "category": "line",
+        "tags": [
+			"Level",
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Map",
+        "state": "{\"0\": \"result\", \"1\": \"map\", \"2\": \"status\", \"3\": \"system\", \"4\": \"network\", \"timestamp\": \"1637766824\"}",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_Map",
+        "label": "Map",
+        "category": "text",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Network",
+        "state": "{\"MAC\": \"8C:AA:B5:7A:CF:A4\", \"IP\": \"10.1.1.116\", \"Subnet\": \"255.255.255.0\", \"Gateway\": \"10.1.1.1\", \"DNS\": \"8.8.8.8 / (IP unset)\", \"RSSI\": \"-19\", \"SSID\": \"Domo\", \"BSSID\": \"1C:BF:CE:E4:AD:E0\", \"WifiChannel\": \"1\", \"timestamp\": \"1637794593\"}",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_Network",
+        "label": "JSON Network",
+        "category": "text",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Network"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Network_BSSID",
+        "state": "1C:BF:CE:E4:AD:E0",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_Network_BSSID",
+        "label": "BSSID",
+        "category": "network",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Network"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_System_Map",
+        "state": "{\"0\": \"result\", \"1\": \"map\", \"2\": \"reboot\", \"3\": \"reload\", \"timestamp\": \"1637794561\"}",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_System_Map",
+        "label": "System Map",
+        "category": "status",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"System"
+        ]
+    },
+    {
+        "link": "OPENHAB_WEB_URL/rest/items/ESP_NAME_Network_Map",
+        "state": "{\"0\": \"result\", \"1\": \"map\", \"2\": \"reboot\", \"3\": \"reload\", \"timestamp\": \"1637794561\"}",
+        "stateDescription": {
+            "pattern": "%s",
+            "readOnly": false,
+            "options": []
+        },
+        "editable": true,
+        "type": "String",
+        "name": "ESP_NAME_Network_Map",
+        "label": "Network Map",
+        "category": "status",
+        "tags": [
+            "Point"
+        ],
+        "groupNames": [
+            "ESP_NAME",
+			"Network"
+        ]
+    }
+]

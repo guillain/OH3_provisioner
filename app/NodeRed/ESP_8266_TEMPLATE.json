@@ -1,0 +1,325 @@
+[
+    {
+        "id": "esp8266000000ESP_REFERENCE",
+        "type": "tab",
+        "label": "ESP/8266/ESP_REFERENCE",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "3af9feb6246ec591",
+        "type": "mqtt in",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "get_sound_state",
+        "topic": "ESP/8266/ESP_REFERENCE/sound/state",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "0dd1491b22ede042",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 160,
+        "y": 220,
+        "wires": [
+            [
+                "2a05389be68d39cd"
+            ]
+        ]
+    },
+    {
+        "id": "51cf2d3fa69ded52",
+        "type": "mqtt out",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "set_sensor_alert",
+        "topic": "ESP/8266/ESP_REFERENCE/sensor/alert",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0dd1491b22ede042",
+        "x": 670,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "948711b6af452bf6",
+        "type": "mqtt in",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "get_presence_state",
+        "topic": "ESP/8266/ESP_REFERENCE/presence/state",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "0dd1491b22ede042",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 280,
+        "wires": [
+            [
+                "2a05389be68d39cd"
+            ]
+        ]
+    },
+    {
+        "id": "b44c68c20c6e6231",
+        "type": "mqtt in",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "get_luminosity_state",
+        "topic": "ESP/8266/ESP_REFERENCE/luminosity/state",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "0dd1491b22ede042",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 340,
+        "wires": [
+            [
+                "2a05389be68d39cd"
+            ]
+        ]
+    },
+    {
+        "id": "2a05389be68d39cd",
+        "type": "function",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "sensor_alert",
+        "func": "return context.global.sensor_alert(msg, ESP_REFERENCE);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 280,
+        "wires": [
+            [
+                "51cf2d3fa69ded52"
+            ]
+        ]
+    },
+    {
+        "id": "cb1a4ea2c24ce9d5",
+        "type": "mqtt in",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "get_luminosity_lux",
+        "topic": "ESP/8266/ESP_REFERENCE/luminosity/lux",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "0dd1491b22ede042",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "25e4dbcd00605191"
+            ]
+        ]
+    },
+    {
+        "id": "25e4dbcd00605191",
+        "type": "function",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "luminosity_state",
+        "func": "var luminosity_state_value = 0;\nif (msg.topic === 'ESP/8266/ESP_REFERENCE/luminosity/lux') {\n    if (Number(msg.payload) > 0) {\n        luminosity_state_value = 1;\n    }\n}\nreturn {topic: 'state', payload: luminosity_state_value};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 120,
+        "wires": [
+            [
+                "14fdd8e2470693fc"
+            ]
+        ]
+    },
+    {
+        "id": "14fdd8e2470693fc",
+        "type": "mqtt out",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "set_luminosity_state",
+        "topic": "ESP/8266/ESP_REFERENCE/luminosity/state",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0dd1491b22ede042",
+        "x": 680,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "9329952d5ce04770",
+        "type": "mqtt in",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "get_LWT",
+        "topic": "ESP/8266/ESP_REFERENCE/LWT",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "0dd1491b22ede042",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 140,
+        "y": 520,
+        "wires": [
+            [
+                "3c92a53a247a722b"
+            ]
+        ]
+    },
+    {
+        "id": "85f26368795d9654",
+        "type": "mqtt out",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "set_system_alert",
+        "topic": "ESP/8266/ESP_REFERENCE/system/alert",
+        "qos": "2",
+        "retain": "true",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "0dd1491b22ede042",
+        "x": 670,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "83a575c39061c5f6",
+        "type": "mqtt in",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "get_system_uptime",
+        "topic": "ESP/8266/ESP_REFERENCE/system/uptime",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "0dd1491b22ede042",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 170,
+        "y": 580,
+        "wires": [
+            [
+                "3c92a53a247a722b"
+            ]
+        ]
+    },
+    {
+        "id": "f4ec9aab71b2ee21",
+        "type": "mqtt in",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "get_system_load",
+        "topic": "ESP/8266/ESP_REFERENCE/system/load",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "0dd1491b22ede042",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 160,
+        "y": 640,
+        "wires": [
+            [
+                "3c92a53a247a722b"
+            ]
+        ]
+    },
+    {
+        "id": "3c92a53a247a722b",
+        "type": "function",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "system_alert",
+        "func": "return context.global.system_alert(msg, ESP_REFERENCE);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 600,
+        "wires": [
+            [
+                "85f26368795d9654"
+            ]
+        ]
+    },
+    {
+        "id": "94932d6cbc7d0d6f",
+        "type": "mqtt in",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "get_mqtt_status",
+        "topic": "ESP/8266/ESP_REFERENCE/mqtt/status",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "0dd1491b22ede042",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "x": 160,
+        "y": 700,
+        "wires": [
+            [
+                "3c92a53a247a722b"
+            ]
+        ]
+    },
+    {
+        "id": "2a05f198a1408fbb",
+        "type": "comment",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "Sensor jobs",
+        "info": "",
+        "x": ESP_REFERENCE0,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "1e18333a41dfcf52",
+        "type": "comment",
+        "z": "esp8266000000ESP_REFERENCE",
+        "name": "System jobs",
+        "info": "",
+        "x": ESP_REFERENCE0,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "0dd1491b22ede042",
+        "type": "mqtt-broker",
+        "name": "mqtt:broker:Domo",
+        "broker": "domo",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    }
+]

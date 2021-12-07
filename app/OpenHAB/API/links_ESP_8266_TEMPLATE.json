@@ -1,0 +1,278 @@
+[
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Sensor_Pressure",
+    "configuration": {},
+    "itemName": "ESP_NAME_Sensor_Pressure"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System",
+    "configuration": {},
+    "itemName": "ESP_NAME_System"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System_Alert",
+    "configuration": {},
+    "itemName": "ESP_NAME_System_Alert"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System_Reload",
+    "configuration": {},
+    "itemName": "ESP_NAME_System_Reload"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Sensor_LuminosityState",
+    "configuration": {},
+    "itemName": "ESP_NAME_Sensor_LuminosityState"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Sensor_Humidity",
+    "configuration": {},
+    "itemName": "ESP_NAME_Sensor_Humidity"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System_FreeStack",
+    "configuration": {},
+    "itemName": "ESP_NAME_System_FreeStack"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Network",
+    "configuration": {},
+    "itemName": "ESP_NAME_Network"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System_Reboot",
+    "configuration": {},
+    "itemName": "ESP_NAME_System_Reboot"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Sensor_Temperature",
+    "configuration": {},
+    "itemName": "ESP_NAME_Sensor_Temperature"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System_Load",
+    "configuration": {},
+    "itemName": "ESP_NAME_System_Load"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Network_APStatus",
+    "configuration": {},
+    "itemName": "ESP_NAME_Network_APStatus"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System_Status",
+    "configuration": {},
+    "itemName": "ESP_NAME_System_Status"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System_Time",
+    "configuration": {},
+    "itemName": "ESP_NAME_System_Time"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Sensor_Presence",
+    "configuration": {},
+    "itemName": "ESP_NAME_Sensor_Presence"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System_Uptime",
+    "configuration": {},
+    "itemName": "ESP_NAME_System_Uptime"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System_FreeRAM",
+    "configuration": {},
+    "itemName": "ESP_NAME_System_FreeRAM"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System_Map",
+    "configuration": {},
+    "itemName": "ESP_NAME_System_Map"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Network_Map",
+    "configuration": {},
+    "itemName": "ESP_NAME_Network_Map"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Status",
+    "configuration": {},
+    "itemName": "ESP_NAME_Status"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Network_Web_Activity",
+    "configuration": {},
+    "itemName": "ESP_NAME_Network_WebActivity"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:MQTT_Status",
+    "configuration": {},
+    "itemName": "ESP_NAME_MQTT_Status"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Network_WifiRSSI",
+    "configuration": {},
+    "itemName": "ESP_NAME_Network_WifiRSSI"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Sensor_Luminosity",
+    "configuration": {},
+    "itemName": "ESP_NAME_Sensor_Luminosity"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Sensor_Alert",
+    "configuration": {},
+    "itemName": "ESP_NAME_Sensor_Alert"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Sensor_Sound",
+    "configuration": {},
+    "itemName": "ESP_NAME_Sensor_Sound"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Map",
+    "configuration": {},
+    "itemName": "ESP_NAME_Map"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:MQTT_ImportStatus",
+    "configuration": {},
+    "itemName": "ESP_NAME_MQTT_ImportStatus"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Network",
+    "configuration": {
+      "function": "$.WifiChannel",
+      "profile": "transform:JSONPATH"
+    },
+    "itemName": "ESP_NAME_Network_WifiChannel"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Network",
+    "configuration": {
+      "function": "$.BSSID",
+      "profile": "transform:JSONPATH"
+    },
+    "itemName": "ESP_NAME_Network_BSSID"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System",
+    "configuration": {
+      "function": "$.Build_Git",
+      "profile": "transform:JSONPATH"
+    },
+    "itemName": "ESP_NAME_System_BuildGit"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Network",
+    "configuration": {
+      "function": "$.DNS",
+      "profile": "transform:JSONPATH"
+    },
+    "itemName": "ESP_NAME_Network_DNS"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Network",
+    "configuration": {
+      "function": "$.IP",
+      "profile": "transform:JSONPATH"
+    },
+    "itemName": "ESP_NAME_Network_IP"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Network",
+    "configuration": {
+      "function": "$.MAC",
+      "profile": "transform:JSONPATH"
+    },
+    "itemName": "ESP_NAME_Network_MAC"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Network",
+    "configuration": {
+      "function": "$.SSID",
+      "profile": "transform:JSONPATH"
+    },
+    "itemName": "ESP_NAME_Network_SSID"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System",
+    "configuration": {
+      "function": "$.Build_Date",
+      "profile": "transform:JSONPATH"
+    },
+    "itemName": "ESP_NAME_System_BuildDate"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System",
+    "configuration": {
+      "function": "$.Name",
+      "profile": "transform:JSONPATH"
+    },
+    "itemName": "ESP_NAME_System_Name"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Network",
+    "configuration": {
+      "function": "$.Gateway",
+      "profile": "transform:JSONPATH"
+    },
+    "itemName": "ESP_NAME_Network_Gateway"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:Network",
+    "configuration": {
+      "function": "$.Subnet",
+      "profile": "transform:JSONPATH"
+    },
+    "itemName": "ESP_NAME_Network_Subnet"
+  },
+  {
+    "editable": true,
+    "channelUID": "mqtt:topic:Domo:ESP_NAME:System",
+    "configuration": {
+      "function": "$.Unit",
+      "profile": "transform:JSONPATH"
+    },
+    "itemName": "ESP_NAME_System_Unit"
+  }
+]

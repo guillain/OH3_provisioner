@@ -1,0 +1,34 @@
+// -- -- Extra MQTT command -- -- //
+
+// JSON report //
+on extra_cmd#json=0 do
+    Publish ESP/8266/%unit%/json/result,'Ok'
+endon
+on extra_cmd#json=1 do
+    Publish ESP/8266/%unit%/json/map,'{"0": "result", "1": "map", "2": "status", "3": "system", "4": "network", "timestamp": "%unixtime%"}'
+endon
+on extra_cmd#json=2 do
+    Publish ESP/8266/%unit%/json/status,'{"wifi": %iswifi%, "ntp": %isntp%, "mqtt": %ismqtt%, "mqtt_import": %ismqttimp%, "timestamp": "%unixtime%"}'
+endon
+on extra_cmd#json=3 do
+    Publish ESP/8266/%unit%/json/system,'{"Name": "%sysname%", "Unit": "%unit%", "Load": "%sysload%", "Heap": "%sysheap%", "Stack": "%sysstack%", "Time": "%systime%", "Uptime": "%uptime%", "Build_Git": "%sysbuild_git%", "Build_Date": "%sysbuild_date%", "timestamp": "%unixtime%"}'
+endon
+on extra_cmd#json=4 do
+    Publish ESP/8266/%unit%/json/network,'{"MAC": "%mac%", "IP": "%ip%", "Subnet": "%subnet%", "Gateway": "%gateway%", "DNS": "%dns%", "RSSI": "%rssi%", "SSID": "%ssid%", "BSSID": "%bssid%", "WifiChannel": "%wi_ch%", "timestamp": "%unixtime%"}'
+endon
+
+// System cmd //
+on extra_cmd#system=0 do
+    Publish ESP/8266/%unit%/system/result,'Ok'
+endon
+on extra_cmd#system=1 do
+    Publish ESP/8266/%unit%/system/map,'{"0": "result", "1": "map", "2": "reboot", "3": "reload", "timestamp": "%unixtime%"}'
+endon
+on extra_cmd#system=2 do
+    Publish ESP/8266/%unit%/system/status,Reboot
+    Reboot
+endon
+on extra_cmd#system=3 do
+    Publish ESP/8266/%unit%/system/status,Reload
+    Load
+endon

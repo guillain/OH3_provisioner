@@ -1,0 +1,139 @@
+[
+    {
+        "status": {
+            "status": "IDLE",
+            "statusDetail": "NONE"
+        },
+        "editable": true,
+        "triggers": [
+            {
+                "id": "1",
+                "configuration": {
+                    "itemName": "ESP_NAME_Sensor_Presence"
+                },
+                "type": "core.ItemStateUpdateTrigger"
+            },
+            {
+                "id": "2",
+                "configuration": {
+                    "itemName": "ESP_NAME_Sensor_Sound"
+                },
+                "type": "core.ItemStateUpdateTrigger"
+            },
+            {
+                "id": "3",
+                "configuration": {
+                    "itemName": "ESP_NAME_Sensor_LuminosityState"
+                },
+                "type": "core.ItemStateUpdateTrigger"
+            }
+        ],
+        "conditions": [],
+        "actions": [
+            {
+                "inputs": {},
+                "id": "3",
+                "configuration": {
+                    "type": "application/python",
+                    "script": "state = \"0\"\ntry:\n\n    for s_item in [\"ESP_NAME_Sensor_Presence\", \"ESP_NAME_Sensor_Sound\", \"ESP_NAME_Sensor_LuminosityState\"]:\n        if str(ir.getItem(s_item).state) == \"ON\":\n            state = \"1\"\n\n\n\n            \nexcept:\n    state = \"err\"\n\n\n\n    \nactions.get(\"mqtt\", \"mqtt:broker:Domo\").publishMQTT(\"ESP/8266/ESP_REFERENCE/sensor/alert\", state)"
+                },
+                "type": "script.ScriptAction"
+            }
+        ],
+        "configuration": {},
+        "configDescriptions": [],
+        "uid": "ESP_NAME_Sensor_Alert",
+        "name": "ESP_NAME_Sensor_Alert",
+        "tags": [],
+        "visibility": "VISIBLE"
+    },
+    {
+        "status": {
+            "status": "IDLE",
+            "statusDetail": "NONE"
+        },
+        "editable": true,
+        "triggers": [
+            {
+                "id": "1",
+                "configuration": {
+                    "itemName": "ESP_NAME_Sensor_Luminosity"
+                },
+                "type": "core.ItemStateUpdateTrigger"
+            }
+        ],
+        "conditions": [],
+        "actions": [
+            {
+                "inputs": {},
+                "id": "3",
+                "configuration": {
+                    "type": "application/python",
+                    "script": "actions.get(\"mqtt\", \"mqtt:broker:Domo\").publishMQTT(\"ESP/8266/ESP_REFERENCE/luminosity/state\", \"0\" if event.itemState < DecimalType(5) else \"1\")"
+                },
+                "type": "script.ScriptAction"
+            }
+        ],
+        "configuration": {},
+        "configDescriptions": [],
+        "uid": "ESP_NAME_Sensor_LuminosityState",
+        "name": "ESP_NAME_Sensor_LuminosityState",
+        "tags": [],
+        "visibility": "VISIBLE"
+    },
+    {
+        "status": {
+            "status": "IDLE",
+            "statusDetail": "NONE"
+        },
+        "editable": true,
+        "triggers": [
+            {
+                "id": "1",
+                "configuration": {
+                    "itemName": "ESP_NAME_System_Status"
+                },
+                "type": "core.ItemStateUpdateTrigger"
+            },
+            {
+                "id": "2",
+                "configuration": {
+                    "itemName": "ESP_NAME_System_Uptime"
+                },
+                "type": "core.ItemStateUpdateTrigger"
+            },
+            {
+                "id": "3",
+                "configuration": {
+                    "itemName": "ESP_NAME_System_Load"
+                },
+                "type": "core.ItemStateUpdateTrigger"
+            },
+            {
+                "id": "4",
+                "configuration": {
+                    "itemName": "ESP_NAME_MQTT_Status"
+                },
+                "type": "core.ItemStateUpdateTrigger"
+            }
+        ],
+        "conditions": [],
+        "actions": [
+            {
+                "inputs": {},
+                "id": "3",
+                "configuration": {
+                    "type": "application/python",
+                    "script": "state = \"0\"\ntry:\n\n    for s_item in [\"ESP_NAME_System_Status\", \"ESP_NAME_MQTT_Status\"]:\n        if str(ir.getItem(s_item).state) != \"Connected\":\n            state = \"1\"\n            \n    if ir.getItem(\"ESP_NAME_System_Uptime\").state < DecimalType(5):\n            state = \"1\"\n            \n    if ir.getItem(\"ESP_NAME_System_Load\").state > DecimalType(90):\n            state = \"1\"\n\n            \nexcept:\n    state = \"err\"\n\n    \nactions.get(\"mqtt\", \"mqtt:broker:Domo\").publishMQTT(\"ESP/8266/ESP_REFERENCE/system/alert\", state)"
+                },
+                "type": "script.ScriptAction"
+            }
+        ],
+        "configuration": {},
+        "configDescriptions": [],
+        "uid": "ESP_NAME_System_Alert",
+        "name": "ESP_NAME_System_Alert",
+        "tags": [],
+        "visibility": "VISIBLE"
+    }
+]

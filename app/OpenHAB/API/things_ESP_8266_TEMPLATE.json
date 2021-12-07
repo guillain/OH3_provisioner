@@ -1,0 +1,651 @@
+[
+	{
+		"statusInfo": {
+			"status": "ONLINE",
+			"statusDetail": "NONE"
+		},
+		"editable": true,
+		"label": "ESP_NAME",
+		"bridgeUID": "mqtt:broker:Domo",
+		"configuration": {
+			"payloadNotAvailable": "Disconnected",
+			"availabilityTopic": "ESP/8266/ESP_REFERENCE/#",
+			"payloadAvailable": "Connected"
+		},
+		"properties": {},
+		"UID": "mqtt:topic:Domo:ESP_NAME",
+		"location": "ESP_LOCATION",
+		"thingTypeUID": "mqtt:topic",
+		"channels": [
+			{
+				"linkedItems": [
+					"ESP_NAME_System_Status"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:System_Status",
+				"id": "System_Status",
+				"channelTypeUID": "mqtt:string",
+				"itemType": "String",
+				"kind": "STATE",
+				"label": "Status",
+				"description": "System status",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"allowedStates": "Ok,Reboot,Connected,Disconnected,Connection lost,Boot,Load,Sleep,Wake,Failed",
+					"postCommand": false,
+					"retained": true,
+					"qos": 1,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/LWT"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_System_Uptime"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:System_Uptime",
+				"id": "System_Uptime",
+				"channelTypeUID": "mqtt:number",
+				"itemType": "Number",
+				"kind": "STATE",
+				"label": "Uptime",
+				"description": "System uptime",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": false,
+					"retained": true,
+					"unit": "min",
+					"min": 0,
+					"qos": 1,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/system/uptime"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_System_Time"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:System_Time",
+				"id": "System_Time",
+				"channelTypeUID": "mqtt:datetime",
+				"itemType": "DateTime",
+				"kind": "STATE",
+				"label": "Time",
+				"description": "System time",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": false,
+					"retained": false,
+					"qos": 1,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/system/time"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_System_FreeRAM"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:System_FreeRAM",
+				"id": "System_FreeRAM",
+				"channelTypeUID": "mqtt:number",
+				"itemType": "Number",
+				"kind": "STATE",
+				"label": "Free RAM",
+				"description": "System free RAM",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": false,
+					"retained": true,
+					"unit": "byte",
+					"min": 0,
+					"qos": 0,
+					"max": 1073741824,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/system/freeheap"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_System_Load"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:System_Load",
+				"id": "System_Load",
+				"channelTypeUID": "mqtt:dimmer",
+				"itemType": "Dimmer",
+				"kind": "STATE",
+				"label": "System Load",
+				"description": "System load",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": false,
+					"retained": false,
+					"unit": "load",
+					"min": 0,
+					"qos": 0,
+					"max": 100,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/system/load"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_System_FreeStack"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:System_FreeStack",
+				"id": "System_FreeStack",
+				"channelTypeUID": "mqtt:number",
+				"itemType": "Number",
+				"kind": "STATE",
+				"label": "Free Stack",
+				"description": "Free stack",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": false,
+					"retained": false,
+					"unit": "byte",
+					"min": 0,
+					"qos": 0,
+					"max": 1073741824,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/system/freestack"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Network_APStatus"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Network_APStatus",
+				"id": "Network_APStatus",
+				"channelTypeUID": "mqtt:string",
+				"itemType": "String",
+				"kind": "STATE",
+				"label": "AP Status",
+				"description": "Network access point status",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"allowedStates": "Ok,Reboot,Connected,Disconnected,Connection lost,Boot,Load,Sleep,Wake,Failed",
+					"postCommand": false,
+					"retained": true,
+					"qos": 1,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/network/access_point/status"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Network_WebActivity"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Network_Web_Activity",
+				"id": "Network_Web_Activity",
+				"channelTypeUID": "mqtt:number",
+				"itemType": "Number",
+				"kind": "STATE",
+				"label": "Web Activity",
+				"description": "Web activity",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": false,
+					"retained": false,
+					"unit": "number",
+					"min": 0,
+					"qos": 1,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/network/web_activity"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Network_WifiRSSI"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Network_WifiRSSI",
+				"id": "Network_WifiRSSI",
+				"channelTypeUID": "mqtt:number",
+				"itemType": "Number",
+				"kind": "STATE",
+				"label": "Wifi RSSI",
+				"description": "Wifi RSSI",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": false,
+					"retained": false,
+					"unit": "dbm",
+					"min": -90,
+					"qos": 0,
+					"max": 0,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/network/wifi_rssi"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_MQTT_Status"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:MQTT_Status",
+				"id": "MQTT_Status",
+				"channelTypeUID": "mqtt:string",
+				"itemType": "String",
+				"kind": "STATE",
+				"label": "MQTT Status",
+				"description": "MQTT status",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"allowedStates": "Ok,Reboot,Connected,Disconnected,Connection lost,Boot,Load,Sleep,Wake,Failed",
+					"postCommand": false,
+					"retained": true,
+					"qos": 1,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/mqtt/status"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_MQTT_ImportStatus"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:MQTT_ImportStatus",
+				"id": "MQTT_ImportStatus",
+				"channelTypeUID": "mqtt:string",
+				"itemType": "String",
+				"kind": "STATE",
+				"label": "MQTT Import Status",
+				"description": "MQTT import status",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"allowedStates": "Ok,Reboot,Connected,Disconnected,Connection lost,Boot,Load,Sleep,Wake,Failed",
+					"postCommand": false,
+					"retained": true,
+					"qos": 1,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/mqtt_import/status"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Map"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Map",
+				"id": "Map",
+				"channelTypeUID": "mqtt:string",
+				"itemType": "String",
+				"kind": "STATE",
+				"label": "Map",
+				"description": "Info about the JSON data mapping in the cmd",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": true,
+					"retained": false,
+					"qos": 0,
+					"commandTopic": "ESP/8266/ESP_REFERENCE/cmd/json",
+					"stateTopic": "ESP/8266/ESP_REFERENCE/json/map",
+					"off": "0",
+					"on": "1"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Status"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Status",
+				"id": "Status",
+				"channelTypeUID": "mqtt:string",
+				"itemType": "String",
+				"kind": "STATE",
+				"label": "JSON Status",
+				"description": "status info under JSON format",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": true,
+					"retained": false,
+					"qos": 0,
+					"commandTopic": "ESP/8266/ESP_REFERENCE/cmd/json",
+					"stateTopic": "ESP/8266/ESP_REFERENCE/json/status",
+					"off": "0",
+					"on": "2"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_System_Name",
+					"ESP_NAME_System_BuildDate",
+					"ESP_NAME_System_Unit",
+					"ESP_NAME_System",
+					"ESP_NAME_System_BuildGit"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:System",
+				"id": "System",
+				"channelTypeUID": "mqtt:string",
+				"itemType": "String",
+				"kind": "STATE",
+				"label": "JSON System",
+				"description": "system info under JSON format",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": true,
+					"retained": false,
+					"qos": 0,
+					"commandTopic": "ESP/8266/ESP_REFERENCE/cmd/json",
+					"stateTopic": "ESP/8266/ESP_REFERENCE/json/system",
+					"off": "0",
+					"on": "3"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Network_Subnet",
+					"ESP_NAME_Network_DNS",
+					"ESP_NAME_Network_SSID",
+					"ESP_NAME_Network_Gateway",
+					"ESP_NAME_Network_IP",
+					"ESP_NAME_Network_BSSID",
+					"ESP_NAME_Network_WifiChannel",
+					"ESP_NAME_Network_MAC",
+					"ESP_NAME_Network"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Network",
+				"id": "Network",
+				"channelTypeUID": "mqtt:string",
+				"itemType": "String",
+				"kind": "STATE",
+				"label": "JSON Network",
+				"description": "network info under JSON format",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": true,
+					"retained": false,
+					"qos": 0,
+					"commandTopic": "ESP/8266/ESP_REFERENCE/cmd/json",
+					"stateTopic": "ESP/8266/ESP_REFERENCE/json/network",
+					"off": "0",
+					"on": "4"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_System_Map"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:System_Map",
+				"id": "System_Map",
+				"channelTypeUID": "mqtt:string",
+				"itemType": "String",
+				"kind": "STATE",
+				"label": "System Map",
+				"description": "Info about the JSON data mapping in the system cmd",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": true,
+					"retained": true,
+					"qos": 0,
+					"commandTopic": "ESP/8266/ESP_REFERENCE/cmd/system",
+					"stateTopic": "ESP/8266/ESP_REFERENCE/system/map",
+					"off": "0",
+					"on": "1"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Network_Map"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Network_Map",
+				"id": "Network_Map",
+				"channelTypeUID": "mqtt:string",
+				"itemType": "String",
+				"kind": "STATE",
+				"label": "Network Map",
+				"description": "Info about the JSON data mapping in the network cmd",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": true,
+					"retained": true,
+					"qos": 0,
+					"commandTopic": "ESP/8266/ESP_REFERENCE/cmd/network",
+					"stateTopic": "ESP/8266/ESP_REFERENCE/network/map",
+					"off": "0",
+					"on": "1"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_System_Reboot"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:System_Reboot",
+				"id": "System_Reboot",
+				"channelTypeUID": "mqtt:string",
+				"itemType": "String",
+				"kind": "STATE",
+				"label": "Reboot",
+				"description": "Reboot system cmd",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": true,
+					"retained": false,
+					"qos": 1,
+					"commandTopic": "ESP/8266/ESP_REFERENCE/cmd/system",
+					"allowedStates": "ok,Reboot,Connected,Disconnected,Connection lost,Boot,Sleep,Wake,Load",
+					"stateTopic": "ESP/8266/ESP_REFERENCE/LWT",
+					"off": "0",
+					"on": "2"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_System_Reload"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:System_Reload",
+				"id": "System_Reload",
+				"channelTypeUID": "mqtt:string",
+				"itemType": "String",
+				"kind": "STATE",
+				"label": "Reload",
+				"description": "Reload system cmd",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": true,
+					"retained": false,
+					"qos": 1,
+					"commandTopic": "ESP/8266/ESP_REFERENCE/cmd/system",
+					"allowedStates": "ok,Reboot,Connected,Disconnected,Connection lost,Boot,Sleep,Wake,Load",
+					"stateTopic": "ESP/8266/ESP_REFERENCE/LWT",
+					"off": "0",
+					"on": "3"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Sensor_Presence"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Sensor_Presence",
+				"id": "Sensor_Presence",
+				"channelTypeUID": "mqtt:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "Presence",
+				"description": "Presence",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": false,
+					"retained": false,
+					"qos": 0,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/presence/state",
+					"off": "0",
+					"on": "1"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Sensor_Sound"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Sensor_Sound",
+				"id": "Sensor_Sound",
+				"channelTypeUID": "mqtt:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "Sound",
+				"description": "Sound",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": false,
+					"retained": false,
+					"qos": 0,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/sound/state",
+					"off": "0",
+					"on": "1"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Sensor_Temperature"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Sensor_Temperature",
+				"id": "Sensor_Temperature",
+				"channelTypeUID": "mqtt:number",
+				"itemType": "Number",
+				"kind": "STATE",
+				"label": "Temperature",
+				"description": "Temperature from BME280",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": false,
+					"retained": false,
+					"unit": "°C",
+					"min": -20,
+					"qos": 0,
+					"max": 50,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/ambiance/temperature"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Sensor_Humidity"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Sensor_Humidity",
+				"id": "Sensor_Humidity",
+				"channelTypeUID": "mqtt:number",
+				"itemType": "Number",
+				"kind": "STATE",
+				"label": "Humidity",
+				"description": "Humidity from BME280",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": false,
+					"retained": false,
+					"unit": "%",
+					"min": 0,
+					"qos": 0,
+					"max": 100,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/ambiance/humidity"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Sensor_Pressure"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Sensor_Pressure",
+				"id": "Sensor_Pressure",
+				"channelTypeUID": "mqtt:number",
+				"itemType": "Number",
+				"kind": "STATE",
+				"label": "Pressure",
+				"description": "Pressure from BME280",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"postCommand": false,
+					"retained": false,
+					"unit": "hp",
+					"min": 0,
+					"qos": 0,
+					"max": 100000,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/ambiance/pressure"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Sensor_Alert"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Sensor_Alert",
+				"id": "Sensor_Alert",
+				"channelTypeUID": "mqtt:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "Sensor Alert",
+				"description": "",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"retained": true,
+					"qos": 1,
+					"stateTopic": "ESP/8266/ESP_REFERENCE/sensor/alert",
+					"off": "0",
+					"on": "1"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_System_Alert"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:System_Alert",
+				"id": "System_Alert",
+				"channelTypeUID": "mqtt:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "System Alert",
+				"description": "",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"stateTopic": "ESP/8266/ESP_REFERENCE/system/alert",
+					"off": "0",
+					"on": "1"
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Sensor_Luminosity"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Sensor_Luminosity",
+				"id": "Sensor_Luminosity",
+				"channelTypeUID": "mqtt:number",
+				"itemType": "Number",
+				"kind": "STATE",
+				"label": "Luminosity",
+				"description": "",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"stateTopic": "ESP/8266/ESP_REFERENCE/luminosity/lux",
+					"max": 1024,
+					"min": 0
+				}
+			},
+			{
+				"linkedItems": [
+					"ESP_NAME_Sensor_LuminosityState"
+				],
+				"uid": "mqtt:topic:Domo:ESP_NAME:Sensor_LuminosityState",
+				"id": "LuminosityState",
+				"channelTypeUID": "mqtt:switch",
+				"itemType": "Switch",
+				"kind": "STATE",
+				"label": "Luminosity",
+				"description": "",
+				"defaultTags": [],
+				"properties": {},
+				"configuration": {
+					"stateTopic": "ESP/8266/ESP_REFERENCE/luminosity/state",
+					"off": "0",
+					"on": "1"
+				}
+			}
+		]
+	}
+]

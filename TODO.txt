@@ -1,0 +1,15 @@
+Migration:
+- Node-Red -> rules
+
+Integration:
+- ESP wifi repeater (for the ground floor): https://github.com/martin-ger/esp_wifi_repeater
+- intercom -> openhab -> twilio -> SMS (notif) / call (v2 for dual way voice com)
+- RGB lights
+- Matrix creator
+- robot
+
+HW:
+- Raspberry 4
+
+
+iconset="'household-set'" icon="'lamp'"
