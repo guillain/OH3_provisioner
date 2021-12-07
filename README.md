@@ -1,17 +1,19 @@
 # OH3_Provisioner
 Tools to provision [OpenHab3](https://www.openhab.org/blog/2020-12-21-openhab-3-0-release.html) with Things, Items and their Links and Rules.
 
-<img src="./doc/images/HABPanel_second_floor.png" alt="drawing" width="200"/>
-<img src="./doc/images/HABPanel_first_floor.png" alt="drawing" width="200"/>
-<img src="./doc/images/HABPanel_ground_floor.png" alt="drawing" width="200"/>
+<img src="./doc/images/HABPanel_second_floor.png" alt="drawing" width="200"/> <img src="./doc/images/HABPanel_first_floor.png" alt="drawing" width="200"/> <img src="./doc/images/HABPanel_ground_floor.png" alt="drawing" width="200"/>
 
-As example, ESP 32 and 8266 templates are provided to provide the following feature:
+As example, ESP 32 and 8266 templates are provided with the following features as backend usage:
 1. ESP-32: **Web cam**
-    > <img src="./doc/images/OH3-ESP_32-Overview.png" alt="drawing" width="400"/> <img src="./doc/images/OH3-ESP_32-Page.png" alt="drawing" width="400"/>
+    > Overview <img src="./doc/images/OH3-ESP_32-Overview.png" alt="drawing" width="400"/>
+
+    > ESP page <img src="./doc/images/OH3-ESP_32-Page.png" alt="drawing" width="400"/>
 2. ESP-8266: **Sensors** (temperature, luminosity, humidity, sound, presence, motion, water pump, sole moisture)
-    > <img src="./doc/images/OH3-ESP_8266-Overview.png" alt="drawing" width="400"/> <img src="./doc/images/OH3-ESP_8266-Page.png" alt="drawing" width="400"/>
+    > Overview <img src="./doc/images/OH3-ESP_8266-Overview.png" alt="drawing" width="400"/> 
+   
+    > ESP page <img src="./doc/images/OH3-ESP_8266-Page.png" alt="drawing" width="400"/>
 3. ESP-8266-RFID: **RFID**
-    > <img src="./doc/images/OH3-ESP_8266_RFID-Page.png" alt="drawing" width="400"/>
+    > ESP page <img src="./doc/images/OH3-ESP_8266_RFID-Page.png" alt="drawing" width="400"/>
 
 ## PreRequisite
 [Jump on the dedicated page](./doc/prerequisite.md)
