@@ -71,6 +71,7 @@ Copy the map files in your OpenHab instance:
 They are used by some linked items.
 
 #### HABPanel
+
 ##### Images
 Copy and/or change the image files in your OpenHab instance in the static web server folder:
 - Source:
@@ -80,7 +81,7 @@ Copy and/or change the image files in your OpenHab instance in the static web se
 - Destination:
   - `/etc/openhab/html/images/`
 
-So the images can be browsed on the following url: https://opnehab:8443/images/{IMAGE_NAME}.png
+So the images can be browsed on the following url: https://opnehab:8443/static/images/{IMAGE_NAME}.png
 
 They are used as background images of the HABPanel floor displays.
 
@@ -90,17 +91,21 @@ Copy and/or adapt the web page from `OpenHAB/HABPanel/*.html` according to your 
 ### ESP
 We need of course some ESP ready to be used.
 
-For that the following firmwares have been build. Only the ESP-8266 has few tuning.
+For that the following firmwares have been build. Only the ESP-8266 has few customizations.
 1. ESP-32: **Web cam** 
     - Firmware: https://github.com/easytarget/esp32-cam-webserver
 2. ESP-8266: **Sensors** (temperature, luminosity, humidity, sound, presence, motion, water pump, sole moisture)
     - Firmware: https://github.com/letscontrolit/ESPEasy
+    - Config: `ESP/config.dat`
     - Rules
         - `./ESP/rules1.txt`
         - `./ESP/rules2.txt`
         - `./ESP/rules4.txt`
 
     *tips*: when you have huge number of devices, use the file explorer to upload a generic `config.data` on all of 
-your devices and just adapt the needs (ie ES Pref and IP address)
-4. ESP-8266-RFID: **RFID**
+your devices and just adapt the needs (ie ES Pref and IP address).
+
+    <img src="./images/ESP-device_overview.png" alt="drawing" width="400"/>
+
+3. ESP-8266-RFID: **RFID**
     - Firmware: https://github.com/esprfid

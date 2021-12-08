@@ -1,0 +1,146 @@
+<div style="position: absolute;
+						top: 0;
+						bottom: 0;
+						left: -10px; right: -10px;
+						background: url('http://domo:8080/static/images/outdoor.png');
+						background-size: cover;
+						background-repeat: no-repeat;">
+
+    <!-- 24_Garage - Sensors -->
+    <div style="position: absolute; background: rgba(0,0,0,0.5); border-radius: 20px;
+                top: 320px; left: 1250px;
+                height: 133px; width: 100px; ">
+        <div class="row" id="24_Garage_System_Alert" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;">
+                <widget-icon iconset="'smarthome-set'" icon="'power'" size="24" state="itemValue('24_Garage_System_Alert')=='OFF' ? 'OFF':'ON'"/>
+            </div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('24_Garage_System_Alert')}}</span></div>
+        </div>
+        <div class="row" id="24_Garage_Sensor_Alert" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;">
+                <widget-icon iconset="'smarthome-set'" icon="'alarm'" size="24" state="itemValue('24_Garage_Sensor_Alert')=='OFF' ? 'OFF':'ON'"/>
+            </div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('24_Garage_Sensor_Alert')}}</span></div>
+        </div>
+        <div class="row" id="24_Garage_Sensor_Temperature" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;">
+                <widget-icon iconset="'smarthome-set'" icon="'temperature'" size="24" state="itemValue('24_Garage_Sensor_Temperature')>20 ? 'OFF':'ON'"/>
+            </div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('24_Garage_Sensor_Temperature')}}°C</span></div>
+        </div>
+        <div class="row" id="24_Garage_Sensor_Humidity" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;">
+                <widget-icon iconset="'smarthome-set'" icon="'drop'" size="24" state="itemValue('24_Garage_Sensor_Humidity')<50 ? 'OFF':'ON'"/>
+            </div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('24_Garage_Sensor_Humidity')}}%</span></div>
+        </div>
+        <div class="row" id="24_Garage_Sensor_Pressure" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;">
+                <widget-icon iconset="'smarthome-set'" icon="'thermostat'" size="24" state="itemValue('24_Garage_Sensor_Pressure')<1000 ? 'OFF':'ON'"/>
+            </div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{'%.02f' | sprintf:itemValue('24_Garage_Sensor_Pressure')/10000}}<small style="font-size:8pt">MPa</small></span></div>
+        </div>
+    </div>
+
+    <!-- 25_Garden - Sensors -->
+    <div style="position: absolute; background: rgba(0,0,0,0.5); border-radius: 20px;
+                top: 400px; left: 450px;
+                height: 133px; width: 100px; ">
+        <div class="row" id="25_Garden_System_Alert" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;">
+                <widget-icon iconset="'smarthome-set'" icon="'power'" size="24" state="itemValue('25_Garden_System_Alert')=='OFF' ? 'OFF':'ON'"/>
+            </div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('25_Garden_System_Alert')}}</span></div>
+        </div>
+        <div class="row" id="25_Garden_Sensor_Alert" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;">
+                <widget-icon iconset="'smarthome-set'" icon="'alarm'" size="24" state="itemValue('25_Garden_Sensor_Alert')=='OFF' ? 'OFF':'ON'"/>
+            </div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('25_Garden_Sensor_Alert')}}</span></div>
+        </div>
+        <div class="row" id="25_Garden_Sensor_Temperature" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;">
+                <widget-icon iconset="'smarthome-set'" icon="'temperature'" size="24" state="itemValue('25_Garden_Sensor_Temperature')>20 ? 'OFF':'ON'"/>
+            </div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('25_Garden_Sensor_Temperature')}}°C</span></div>
+        </div>
+        <div class="row" id="25_Garden_Sensor_Humidity" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;">
+                <widget-icon iconset="'smarthome-set'" icon="'drop'" size="24" state="itemValue('25_Garden_Sensor_Humidity')<50 ? 'OFF':'ON'"/>
+            </div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{itemValue('25_Garden_Sensor_Humidity')}}%</span></div>
+        </div>
+        <div class="row" id="25_Garden_Sensor_Pressure" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;">
+                <widget-icon iconset="'smarthome-set'" icon="'thermostat'" size="24" state="itemValue('25_Garden_Sensor_Pressure')<1000 ? 'OFF':'ON'"/>
+            </div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">{{'%.02f' | sprintf:itemValue('25_Garden_Sensor_Pressure')/10000}}<small style="font-size:8pt">MPa</small></span></div>
+        </div>
+    </div>
+
+    <!-- 27_Garage - Camera -->
+    <div style="position: absolute; background: rgba(0,0,0,0.5); border-radius: 20px;
+                top: 650px; left: 900px;
+                height: 87px; width: 140px;">
+        <div class="row" id="27_Garage_Lamp" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;" ><div style="margin-top: 2px;" ng-click="sendCmd('27_Garage_Lamp', itemState('27_Garage_Lamp_OnOff')=='ON' ? '0' : '50')">
+                <widget-icon state="itemValue('27_Garage_Lamp_OnOff')=='OFF' ? 'OFF':'ON'" iconset="'freepik-household'" colorize="false" icon="'lamp'" size="24" />
+            </div></div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">Lamp</span></div>
+        </div>
+        <div class="row" id="27_Garage_Face_Detection" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;" ng-click="sendCmd('27_Garage_Face_Detection', itemState('27_Garage_Face_Detection')=='ON' ? '0' : '50')">
+                <widget-icon state="itemValue('27_Garage_Face_Detection')=='OFF' ? 'OFF':'ON'" iconset="'freepik-gadgets'" colorize="false" icon="'cctv'" size="24" />
+            </div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">Detection</span></div>
+        </div>
+        <div class="row" id="27_Garage_Face_Recognition" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;" ng-click="sendCmd('27_Garage_Face_Recognition', itemState('27_Garage_Face_Recognition')=='ON' ? '0' : '50')">
+                <widget-icon state="itemValue('27_Garage_Face_Recognition')=='OFF' ? 'OFF':'ON'" iconset="'freepik-housethings'" colorize="false" icon="'square-framed-mirror'" size="24" />
+            </div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">Recognition</span></div>
+        </div>
+    </div>
+
+  	<!-- 27_Garage - Streaming -->
+    <div style="position: absolute; background: rgba(0,0,0,0.5); border-radius: 20px;
+            top: 490px; left: 1060px;
+            height: 305px; width: 305px;">
+        <div ng-init="image={url: 'http://10.1.1.127:8080/view'} " style="width: 100%; height: 300px; margin: 2px;" >
+            <widget-image ng-model="image" ></widget-image>
+        </div>
+    </div>
+
+    <!-- 28_Garden - Camera -->
+    <div style="position: absolute; background: rgba(0,0,0,0.5); border-radius: 20px;
+                top: 30px; left: 170px;
+                height: 87px; width: 140px;">
+        <div class="row" id="28_Garden_Lamp" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;" ><div style="margin-top: 2px;" ng-click="sendCmd('28_Garden_Lamp', itemState('28_Garden_Lamp_OnOff')=='ON' ? '0' : '50')">
+                <widget-icon state="itemValue('28_Garden_Lamp_OnOff')=='OFF' ? 'OFF':'ON'" iconset="'freepik-household'" colorize="false" icon="'lamp'" size="24" />
+            </div></div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">Lamp</span></div>
+        </div>
+        <div class="row" id="28_Garden_Face_Detection" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;" ng-click="sendCmd('28_Garden_Face_Detection', itemState('28_Garden_Face_Detection')=='ON' ? '0' : '50')">
+                <widget-icon state="itemValue('28_Garden_Face_Detection')=='OFF' ? 'OFF':'ON'" iconset="'freepik-gadgets'" colorize="false" icon="'cctv'" size="24" />
+            </div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">Detection</span></div>
+        </div>
+        <div class="row" id="28_Garden_Face_Recognition" style="margin-top: 2px;">
+            <div class="col-xs-3" style="margin-left: 5px;" ng-click="sendCmd('28_Garden_Face_Recognition', itemState('28_Garden_Face_Recognition')=='ON' ? '0' : '50')">
+                <widget-icon state="itemValue('28_Garden_Face_Recognition')=='OFF' ? 'OFF':'ON'" iconset="'freepik-housethings'" colorize="false" icon="'square-framed-mirror'" size="24" />
+            </div>
+            <div class="col-xs-3 text-left"><span style="font-size: 12pt;">Recognition</span></div>
+        </div>
+    </div>
+
+  	<!-- 28_Garden - Streaming -->
+    <div style="position: absolute; background: rgba(0,0,0,0.5); border-radius: 20px;
+            top: 20px; left: 350px;
+            height: 205px; width: 205px;">
+        <div ng-init="image={url: 'http://10.1.1.128:8080/view'} " style="width: 100%; height: 200px; margin: 2px;" >
+            <widget-image ng-model="image" ></widget-image>
+        </div>
+    </div>
+</div>

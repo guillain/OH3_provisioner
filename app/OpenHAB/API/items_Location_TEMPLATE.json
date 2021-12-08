@@ -139,7 +139,9 @@
 		"tags": [
 			"Location"
 		],
-		"groupNames": []
+		"groupNames": [
+			"Outdoor"
+		]
 	},
 	{
 		"members": [],
@@ -207,6 +209,20 @@
 	},
 	{
 		"members": [],
+		"link": "OPENHAB_WEB_URL/rest/items/Outdoor",
+		"state": "NULL",
+		"editable": true,
+		"type": "Group",
+		"name": "Outdoor",
+		"label": "Outdoor",
+		"category": "garden",
+		"tags": [
+			"Location"
+		],
+		"groupNames": []
+	},
+	{
+		"members": [],
 		"link": "OPENHAB_WEB_URL/rest/items/Garage",
 		"state": "NULL",
 		"editable": true,
@@ -217,7 +233,9 @@
 		"tags": [
 			"Location"
 		],
-		"groupNames": []
+		"groupNames": [
+			"Outdoor"
+		]
 	},
 	{
 		"members": [],

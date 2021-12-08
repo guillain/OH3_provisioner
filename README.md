@@ -1,24 +1,85 @@
 # OH3_Provisioner
 Tools to provision [OpenHab3](https://www.openhab.org/blog/2020-12-21-openhab-3-0-release.html) with Things, Items and their Links and Rules.
 
-<img src="./doc/images/HABPanel_second_floor.png" alt="drawing" width="200"/> <img src="./doc/images/HABPanel_first_floor.png" alt="drawing" width="200"/> <img src="./doc/images/HABPanel_ground_floor.png" alt="drawing" width="200"/>
+As example, ESP 32 and 8266 setup and templates are provided with the following features:
+- Web camera (streaming, control, monitoring)
+- RFID (scan, enrolment, opendoor)
+- Sensors (control, monitoring, alerting)
+- System (monitoring, alerting)
 
-As example, ESP 32 and 8266 templates are provided with the following features as backend usage:
-1. ESP-32: **Web cam**
-    > Overview <img src="./doc/images/OH3-ESP_32-Overview.png" alt="drawing" width="400"/>
+### Frontend
+<table>
+    <thead>
+        <tr>
+            <th>Overview</th>
+            <th colspan="2=">Layer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4 style="width: 40%;"><img src="./doc/images/HABPanel-Overview.png" alt="drawing" width="300"/></td>
+            <td style="width: 10%;">Second</td>
+            <td style="width: 50%;"><img src="./doc/images/HABPanel_second_floor.png" alt="drawing" width="300"/></td>
+        </tr>
+        <tr>
+            <td>First</td>
+            <td><img src="./doc/images/HABPanel_first_floor.png" alt="drawing" width="300"/></td>
+        </tr>
+        <tr>
+            <td>Ground</td>
+            <td><img src="./doc/images/HABPanel_ground_floor.png" alt="drawing" width="300"/></td>
+        </tr>
+        <tr>
+            <td>Outdoor</td>
+            <td><img src="./doc/images/HABPanel_outdoor.png" alt="drawing" width="300"/></td>
+        </tr>
+    </tbody>
+</table>
 
-    > ESP page <img src="./doc/images/OH3-ESP_32-Page.png" alt="drawing" width="400"/>
-2. ESP-8266: **Sensors** (temperature, luminosity, humidity, sound, presence, motion, water pump, sole moisture)
-    > Overview <img src="./doc/images/OH3-ESP_8266-Overview.png" alt="drawing" width="400"/> 
-   
-    > ESP page <img src="./doc/images/OH3-ESP_8266-Page.png" alt="drawing" width="400"/>
-3. ESP-8266-RFID: **RFID**
-    > ESP page <img src="./doc/images/OH3-ESP_8266_RFID-Page.png" alt="drawing" width="400"/>
+### Backend
+<table style="width: 100%;">
+    <thead>
+        <tr>
+            <th>Overview</th>
+            <th colspan="4=">Layer</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan=4 style="width: 30%;">
+               <img src="./doc/images/OH3-Properties.png" alt="drawing" width="400"/>
+               <img src="./doc/images/OH3-Overview-Location.png" alt="drawing" width="400"/>
+               <img src="./doc/images/OH3_Temperature-analyse.png" alt="drawing" width="400"/>
+            </td>
+            <td style="width: 3%;"><b>Hardware</b></td>
+            <td style="width: 7%;"><b>Usage</b></td>
+            <td style="width: 30%;"><b>Overview</b></td>
+            <td style="width: 30%;"><b>Single page</b></td>
+        </tr>
+        <tr>
+            <td>ESP-32</td>
+            <td>Web cam</td>
+            <td><img src="./doc/images/OH3-ESP_32-Overview.png" alt="drawing" width="400"/></td>
+            <td><img src="./doc/images/OH3-ESP_32-Page.png" alt="drawing" width="400"/></td>
+        </tr>
+        <tr>
+            <td>ESP-8266</td>
+            <td>Sensors (temperature, luminosity, humidity, sound, presence, motion, water pump, sole moisture)</td>
+            <td><img src="./doc/images/OH3-ESP_8266-Overview.png" alt="drawing" width="400"/></td>
+            <td><img src="./doc/images/OH3-ESP_8266-Page.png" alt="drawing" width="400"/></td>
+        </tr>
+        <tr>
+            <td>ESP-8266-RFID</td>
+            <td>RFID</td>
+            <td></td>
+            <td><img src="./doc/images/OH3-ESP_8266_RFID-Page.png" alt="drawing" width="400"/></td>
+        </tr>
+    </tbody>
+</table>
 
-## PreRequisite
-[Jump on the dedicated page](./doc/prerequisite.md)
+## [PreRequisite](./doc/prerequisite.md)
 
-## Usage
+## [Usage](./doc/usage.md)
 All is managed by the shell script `generate.sh`
 ````commandline
 Used to provision OpenHAB3 via API with the help of JSON templates and to generate the template web files.
@@ -37,34 +98,12 @@ Used to provision OpenHAB3 via API with the help of JSON templates and to genera
     -v | --verbose                        Display verbose traces. Default: 0
 ````
 
-## What to do after?
-Only the web pages must be created manually.
+## [What to do after?](./doc/next.md)
 
-### OpenHab UI
-Copy/paste the content of the file generated in `OpenHAB/generate` to populate the source code.
+## [Default parameters](./doc/default_parameters.md)
 
-### HABPanel
-Create one `template` by floor and upload the page content from the files in the folder `OpenHAB/HABPanel/*.html`.
+## [Infrastructure](./doc/infrastructure.md)
 
-## Default parameters
-````commandline
-EXEC_API=0
-DO_ITEMS=1
-WEB_PAGES=0
-DEBUG=0
+## [Links](./doc/links.md)
 
-ESP_INDEX_START=15
-ESP_INDEX_END=30
-ESP_IP_PATTERN="10.1.1.1"
-
-PAGE_ROW_INDEX=1
-
-OH_WEB_URL="http://domo:8080"
-OH_TOKEN=""
-
-INPUT_DIR="./"
-GENE_DIR="generate/"
-API_DIR="${INPUT_DIR}OpenHAB/API/"
-TMP_FILE="temp.json"
-_JQ="jq"
-````
+## [Tree](./doc/tree.md)
